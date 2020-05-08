@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+<div class="row mb-3">
+{% for Category_obj in Category %}
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-uppercase mb-1">จำนวนประเภทวัดทั้งหมด</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">{{Category_obj.id_category}}</div>
+            <div class="mt-2 mb-0 text-muted text-xs">
+              <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-church fa-2x text-primary"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+
+{% for temple_obj in temple %}
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card h-100">
+      <div class="card-body">
+        <div class="row align-items-center">
+          <div class="col mr-2">
+            <div class="text-xs font-weight-bold text-uppercase mb-1">จำนวนวัดทั้งหมด</div>
+            <div class="h5 mb-0 font-weight-bold text-gray-800">{{temple_obj.id_temple}}</div>
+            <div class="mt-2 mb-0 text-muted text-xs">
+              <span class="text-success mr-2"><i class="fa fa-arrow-up"></i></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="col-auto">
+            <i class="fas fa-church fa-2x text-primary"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+  <hr class="sidebar-divider"></div>
+  <div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">เข้าสู่ระบบแอดมิน</h5>
+          <p class="card-text">สำหรับแอดมินเท่านั้น</p>
+          <a href="{% url 'admin:login' %}" class="btn btn-primary">คลิก</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">รีวิววัด</h5>
+          <p class="card-text">วัดที่ตั้งในจังหวัดศรีสะเกษ</p>
+          <a href="{% url 'temple' %}" class="btn btn-primary">คลิก</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    {% endblock %}
+    
+  

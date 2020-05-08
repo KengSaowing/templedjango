@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+
+<!-- Search form -->
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style> 
+  input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 100%;
+  }
+  </style>
+  </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+<input id="myInput" type="text" name="search" placeholder="Search..">
+<hr class="sidebar-divider">
+  <br>
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th scope="col">อันดับ</th>
+        <th scope="col">ประเภทวัด</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      {% for Category_obj in Category %}
+      <tr>
+          <td>{{Category_obj.id_category}}</td>
+          <td>{{Category_obj.name}}</td>
+          
+          <td>
+          </td>
+      </tr>
+     
+     {% endfor %}
+    </tbody>
+  </table>
+ 
+  {% endblock %}

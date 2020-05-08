@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+  {% for temple_obj in temple %}
+    <div class="col-sm">
+      <div class="card" style="width: 18rem ;">
+        <img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap"width="60" height="150">
+          <div class="card-body">
+            <h5 class="card-title">{{temple_obj.name}}</h5>
+            <p class="card-text">{{temple_obj.Monk}}</p>
+            <p class="card-text">{{temple_obj.Details}}</p>
+          </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+</div>
+{% endblock %}
+      
+   
