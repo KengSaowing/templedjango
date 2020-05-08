@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Enroll',
-    "django_static_jquery3",
+    
 ]
 
 MIDDLEWARE = [
