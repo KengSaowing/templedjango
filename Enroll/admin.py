@@ -5,5 +5,5 @@ class templeAdmin(admin.ModelAdmin):
     list_display = ('name','Monk','Details','latitude','Longitude',)
 
 
-admin.site.register(models.Category)
+admin.site.register(models.category)
 admin.site.register(models.temple, templeAdmin)
