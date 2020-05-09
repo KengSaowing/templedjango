@@ -25,7 +25,7 @@ class temple(models.Model):
     latitude = models.CharField(max_length=255)
     Longitude = models.CharField(max_length=255)
     image = models.ImageField(upload_to='photo' , null= True,blank=True)
-    category = models.ForeignKey(category, on_delete=models.CASCADE)
+    Category = models.ForeignKey(category, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name

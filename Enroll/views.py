@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 def Home(request):
-    CategoryList = models.Category.objects.all().order_by('-id')[:1]
+    CategoryList = models.category.objects.all().order_by('-id')[:1]
     temple_obj = models.temple.objects.all().order_by('-id')[:1]
     context = {
         'title': "สรุปจำนวน",
