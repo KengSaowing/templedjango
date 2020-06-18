@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.contrib.postgres.search import SearchQuery
+from cloudinary.models import CloudinaryField
 
 #Create your models here.
 
@@ -24,7 +25,7 @@ class temple(models.Model):
     Details = models.CharField(max_length=255)
     latitude = models.CharField(max_length=255)
     Longitude = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='photo' , null= True,blank=True)
+    image = CloudinaryField('image')
     Category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def __str__(self):

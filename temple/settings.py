@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import dj_database_url
+import cloudinary
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
     'Enroll',
     
 ]
@@ -113,7 +115,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+cloudinary.config(
+    cloud_name = 'https-templeinsisaket-herokuapp-com',
+    api_key = '369659337784977',
+    api_secret = '_YLhsXJi-0Iyhfs9ouq_CIelQg8'
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
