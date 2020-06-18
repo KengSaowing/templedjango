@@ -35,12 +35,3 @@ def temList(request):
     }
     return render(request, 'tem.html', context)
 
-def TClist(request):
-    templeL_obj = models.temple.objects.all()
-    Category_obj = models.Category.objects.all()
-    context = {
-        'title': "ประเภทวัด/ชื่อวัด",
-        'temple': templeL_obj,
-        'Category': Category_obj
-    }
-    return render(request, 'viws.html' , context)
