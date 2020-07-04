@@ -19,11 +19,20 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import (login as auth_login,  authenticate)
+from rest_framework import routers, serializers, viewsets
+from Enroll.views import templeViewSet
 
+
+router = routers.DefaultRouter()
+router.register('api/temple', templeViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('Enroll.urls'))
+    path('',include('Enroll.urls')),
+    path('',include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
+
 
 ]
 # For display Media or Image
