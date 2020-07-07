@@ -21,10 +21,11 @@ from django.conf.urls.static import static
 from django.contrib.auth import (login as auth_login,  authenticate)
 from rest_framework import routers, serializers, viewsets
 from Enroll.views import templeViewSet
-
+from Enroll.views import CategorySerializer
 
 router = routers.DefaultRouter()
 router.register('api/temple', templeViewSet)
+router.register('api/Category', CategorySerializer)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

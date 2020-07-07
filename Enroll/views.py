@@ -3,6 +3,8 @@ from Enroll import models
 from django.contrib.auth.models import User
 from rest_framework.viewsets import ModelViewSet
 from .serializers import TempleSerializer
+from .serializers import CategorySerializer
+
 # Create your views here.
 def Home(request):
     Category_obj = models.Category.objects.all().order_by('-id')[:1]
@@ -39,3 +41,7 @@ def temList(request):
 class templeViewSet(ModelViewSet):
     queryset = models.temple.objects.all()
     serializer_class = TempleSerializer
+
+class CategorySerializer(ModelViewSet):
+    queryset = models.Category.objects.all()
+    serializer_class = CategorySerializer
