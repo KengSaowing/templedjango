@@ -4,7 +4,8 @@ from django.contrib.auth.models import User
 from rest_framework.viewsets import ModelViewSet
 from .serializers import TempleSerializer
 from .serializers import CategorySerializer
-
+from rest_framework.response import Response
+from rest_framework import generics
 # Create your views here.
 def Home(request):
     Category_obj = models.Category.objects.all().order_by('-id')[:1]
@@ -38,9 +39,20 @@ def temList(request):
     }
     return render(request, 'tem.html', context)
 
-class templeViewSet(ModelViewSet):
-    queryset = models.temple.objects.all()
+def nametemple(request):
+    temple_id = request.data.get("templeid")
+    temple_obj = models.temple.objects.get(id=temple_id)
+    #serializer_class = TempleSerializer
+    data = {
+        'name': temple_obj.name
+    }
+    return Response(data)
+
+class templeViewSet(generics.ListAPIView):
     serializer_class = TempleSerializer
+    def get_queryset(self):
+        return models.temple.objects.all()
+    
 
 class CategorySerializer(ModelViewSet):
     queryset = models.Category.objects.all()
