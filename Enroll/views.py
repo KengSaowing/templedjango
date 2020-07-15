@@ -52,6 +52,12 @@ class templeViewSet(generics.ListAPIView):
     serializer_class = TempleSerializer
     def get_queryset(self):
         return models.temple.objects.all()
+
+class templeSelectViewSet(generics.ListAPIView):
+    serializer_class = TempleSerializer
+    def get_queryset(self):
+        temple_id = self.kwargs['templeid']
+        return models.temple.objects.filter(id=temple_id)
     
 
 class CategorySerializer(ModelViewSet):

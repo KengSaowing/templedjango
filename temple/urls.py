@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 from django.contrib.auth import (login as auth_login,  authenticate)
 from rest_framework import routers, serializers, viewsets
 from Enroll.views import templeViewSet
-from Enroll.views import CategorySerializer, nametemple
+from Enroll.views import CategorySerializer, nametemple, templeSelectViewSet
 
 router = routers.DefaultRouter()
 #router.register('api/temple', templeViewSet)
@@ -33,6 +33,7 @@ urlpatterns = [
     path('',include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api/temple', templeViewSet.as_view(), name="get-temple-list"),
+    path('api/temple/<int:templeid>', templeSelectViewSet.as_view(), name="get-temple-selected"),
     #path('api/get/temple', nametemple.as_view(), name="api-get-temple"),
 
 ]
