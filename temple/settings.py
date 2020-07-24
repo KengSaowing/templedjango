@@ -28,7 +28,7 @@ SECRET_KEY = 'aqf)7zm#v+r!q8gxy%kn%mr=1srg@&%uumtt#$&9j&8ley+c1e'
 DEBUG = True
 
 #ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.herokuapp.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.herokuapp.com','192.168.43.129']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'rest_framework',
+    'easy_maps',
     'Enroll',
     
 ]
@@ -58,7 +59,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'temple.urls'
-
 
 TEMPLATES = [
     {

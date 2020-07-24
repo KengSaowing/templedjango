@@ -5,7 +5,8 @@ from rest_framework.viewsets import ModelViewSet
 from .serializers import TempleSerializer
 from .serializers import CategorySerializer
 from rest_framework.response import Response
-from rest_framework import generics
+from rest_framework import generics ,fields
+from rest_framework import filters
 # Create your views here.
 def Home(request):
     Category_obj = models.Category.objects.all().order_by('-id')[:1]
@@ -63,3 +64,9 @@ class templeSelectViewSet(generics.ListAPIView):
 class CategorySerializer(ModelViewSet):
     queryset = models.Category.objects.all()
     serializer_class = CategorySerializer
+
+class templeAPIView(generics.ListCreateAPIView):
+    search_fields = ['name','Details']
+    filter_backends = (filters.SearchFilter,)
+    queryset = models.temple.objects.all()
+    serializer_class = TempleSerializer
