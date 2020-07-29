@@ -3,8 +3,15 @@ from Enroll import models
 from django.contrib.auth.models import User
 from rest_framework.viewsets import ModelViewSet
 from .serializers import TempleSerializer
+<<<<<<< HEAD
 from django.db.models import Q
 
+=======
+from .serializers import CategorySerializer
+from rest_framework.response import Response
+from rest_framework import generics ,fields
+from rest_framework import filters
+>>>>>>> 3dcd03770d167c0f9c210f098e3824b6836bad59
 # Create your views here.
 def Home(request):
     Category_obj = models.Category.objects.all().order_by('-id')[:1]
