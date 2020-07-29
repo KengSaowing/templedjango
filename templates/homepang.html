@@ -18,13 +18,27 @@
     <label class="form-check-label" for="inlineRadio1">{{Category_obj.name}}</label>
   </div>
   {% endfor %}
-  <CENTER><input type="submit" value="Submit"></CENTER>
+  <div class="dropdown-divider"></div>
+  <CENTER><input type="submit"  class="btn btn-primary btn-lg btn-block" value="ค้นหา"></CENTER>
 </form>
-
-<div>
-{% for temple in temples %}
-  <div>{{temple}}</div>
+<div class="dropdown-divider"></div>
+<div class="dropdown-divider"></div>
+<div class="container">
+  <div class="row">
+{% for temple_obj in temples %}
+<div class="dropdown-divider"></div>
+<div class="col-sm">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{temple_obj.name}}</h5>
+    <p class="card-text">{{temple_obj.Monk}}</p>
+    <a href="#" class="btn btn-primary">เพิ่มเติม</a>
+  </div>
+</div>
+</div>
 {% endfor %}
+</div>
 </div>
 
 
