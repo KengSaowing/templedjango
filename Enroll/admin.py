@@ -3,7 +3,7 @@ from Enroll import models
 # Register your models here.
 class templeAdmin(admin.ModelAdmin):
     list_display = ('name','Monk','Details','latitude','Longitude',)
-    search_fields = ['Category_name']
+
 
 
 admin.site.register(models.Category)
