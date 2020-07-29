@@ -13,14 +13,12 @@ User.add_to_class("__str__", get_users_name)
 
  
 class Category(models.Model):
-    id_category = models.CharField(max_length=85)
     name = models.CharField(max_length=255)
     
     def __str__(self):
         return self.name
 
-class temple(models.Model):
-    id_temple = models.CharField(max_length=5) 
+class temple(models.Model): 
     name = models.CharField(max_length=255) 
     Monk = models.CharField(max_length=255)
     Details = models.CharField(max_length=255)
