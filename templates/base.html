@@ -21,7 +21,7 @@
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'home' %}">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'wap' %}">
         <div class="sidebar-brand-icon">
           <img src="{% static 'img/logo/sskru.png'%}">
         </div>
@@ -31,11 +31,17 @@
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'temple' %}">
+        <a class="nav-link" href="{% url 'home' %}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>ข้อมูลวัด</span></a>
       </li>
       <hr class="sidebar-divider">
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'tem' %}">
+          <i class="fas fa-fw fa-tachometer-alt"></i>
+          <span>รีวิววัด</span></a>
+      </li>
     
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
