@@ -67,3 +67,9 @@ class templeViewSet(ModelViewSet):
     queryset = models.temple.objects.all()
     serializer_class = TempleSerializer
 
+class templeSelectViewSet(ModelViewSet):
+    queryset = models.temple.objects.all()
+    serializer_class = TempleSerializer
+
+
+
