@@ -68,8 +68,8 @@ def wapview(request):
     
     return render(request, 'homepang.html', context)
   
-    class templeViewSet(generics.ListAPIView):
-        serializer_class = TempleSerializer
+class templeViewSet(generics.ListAPIView):
+    serializer_class = TempleSerializer
     def get_queryset(self):
         return models.temple.objects.all()
 
@@ -82,10 +82,9 @@ class templeSelectViewSet(generics.ListAPIView):
 class templeViewSet(ModelViewSet):
     queryset = models.temple.objects.all()
     serializer_class = TempleSerializer
-
-class templeSelectViewSet(ModelViewSet):
-    queryset = models.temple.objects.all()
-    serializer_class = TempleSerializer
-
+    
+class CategorySerializer(ModelViewSet):
+    queryset = models.Category.objects.all()
+    serializer_class = CategorySerializer
 
 
