@@ -2,6 +2,7 @@ from django.shortcuts import HttpResponse, redirect, render
 from Enroll import models
 from django.contrib.auth.models import User
 from rest_framework.viewsets import ModelViewSet
+from .serializers import CategorySerializer
 from .serializers import TempleSerializer
 from django.db.models import Q
 
