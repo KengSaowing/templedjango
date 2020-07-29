@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{title}}
+{% endblock %}
+{% block content %}
+
+<form action="" method="POST">
+{% csrf_token %}
+<div class="active-pink-3 active-pink-4 mb-4">
+    <input class="form-control" type="text" placeholder="ค้นหา" name='name' aria-label="Search">
+    <div class="dropdown-divider"></div>
+  </div>
+  <div class="dropdown-divider"></div>
+  <p>เลือกประเภทวัด</p>
+  {% for Category_obj in Category %}
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="type" id="type" value="{{Category_obj.id}}">
+    <label class="form-check-label" for="inlineRadio1">{{Category_obj.name}}</label>
+  </div>
+  {% endfor %}
+  <CENTER><input type="submit" value="Submit"></CENTER>
+</form>
+
+<div>
+{% for temple in temples %}
+  <div>{{temple}}</div>
+{% endfor %}
+</div>
+
+
+{% endblock %}
