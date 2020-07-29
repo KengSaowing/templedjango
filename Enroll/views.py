@@ -4,6 +4,11 @@ from django.contrib.auth.models import User
 from rest_framework.viewsets import ModelViewSet
 from .serializers import CategorySerializer
 from .serializers import TempleSerializer
+from rest_framework.viewsets import ModelViewSet
+from .serializers import TempleSerializer
+from .serializers import CategorySerializer
+from rest_framework.response import Response
+from rest_framework import generics
 from django.db.models import Q
 
 # Create your views here.
@@ -62,6 +67,17 @@ def wapview(request):
     
     
     return render(request, 'homepang.html', context)
+  
+    class templeViewSet(generics.ListAPIView):
+        serializer_class = TempleSerializer
+    def get_queryset(self):
+        return models.temple.objects.all()
+
+class templeSelectViewSet(generics.ListAPIView):
+    serializer_class = TempleSerializer
+    def get_queryset(self):
+        temple_id = self.kwargs['templeid']
+        return models.temple.objects.filter(id=temple_id)
 
 class templeViewSet(ModelViewSet):
     queryset = models.temple.objects.all()

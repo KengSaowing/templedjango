@@ -24,6 +24,7 @@ from Enroll.views import templeViewSet
 from Enroll.views import CategorySerializer, templeSelectViewSet
 
 router = routers.DefaultRouter()
+#router.register('api/temple', templeViewSet)
 router.register('api/Category', CategorySerializer)
 
 urlpatterns = [
@@ -33,6 +34,7 @@ urlpatterns = [
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('api/temple', templeViewSet.as_view(), name="get-temple-list"),
     path('api/temple/<int:templeid>', templeSelectViewSet.as_view(), name="get-temple-selected"),
+    path('api/temple/', templeAPIView.as_view()),
 ]
 # For display Media or Image
 if settings.DEBUG:
