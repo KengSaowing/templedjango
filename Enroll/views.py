@@ -79,10 +79,10 @@ class templeSelectViewSet(generics.ListAPIView):
         temple_id = self.kwargs['templeid']
         return models.temple.objects.filter(id=temple_id)
 
-class templeViewSet(ModelViewSet):
+class templeViewSet(generics.ListAPIView):
     queryset = models.temple.objects.all()
     serializer_class = TempleSerializer
-    
+
 class CategorySerializer(ModelViewSet):
     queryset = models.Category.objects.all()
     serializer_class = CategorySerializer
