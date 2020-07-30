@@ -21,26 +21,30 @@
   <div class="dropdown-divider"></div>
   <CENTER><input type="submit"  class="btn btn-primary btn-lg btn-block" value="ค้นหา"></CENTER>
 </form>
-
-<div class="dropdown-divider"></div>
-<div class="dropdown-divider"></div>
-<div class="container">
-  <div class="row">
-{% for temple_obj in temples %}
-<div class="dropdown-divider"></div>
-<div class="col-sm">
-<div class="card mb-4">
-  <img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{temple_obj.name}}</h5>
-    <p class="card-text">{{temple_obj.Monk}}</p>
-    <a href="#" class="btn btn-primary">เพิ่มเติม</a>
+<div class="mb-4"></div>
+  
+<div class="card-columns">
+  {% for temple_obj in temples %}
+  <div class="card mb-4">
+    <img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{temple_obj.name}}</h5>
+      <p class="card-text">{{temple_obj.Monk}}</p>
+      <a href="#" class="btn btn-primary">เพิ่มเติม</a>
+    </div>
   </div>
-</div>
-</div>
-{% endfor %}
-</div>
+  {% endfor %}
 </div>
 
+<style>
+  .card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
 
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+</style>
 {% endblock %}
