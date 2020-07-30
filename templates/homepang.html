@@ -21,6 +21,7 @@
   <div class="dropdown-divider"></div>
   <CENTER><input type="submit"  class="btn btn-primary btn-lg btn-block" value="ค้นหา"></CENTER>
 </form>
+
 <div class="dropdown-divider"></div>
 <div class="dropdown-divider"></div>
 <div class="container">
@@ -28,7 +29,7 @@
 {% for temple_obj in temples %}
 <div class="dropdown-divider"></div>
 <div class="col-sm">
-<div class="card" style="width: 18rem;">
+<div class="card mb-4">
   <img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{temple_obj.name}}</h5>
