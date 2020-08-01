@@ -8,5 +8,9 @@ urlpatterns = [
     path('Category_List',views.CategoryList, name='Category'),
     path('tem_List', views.temList, name='tem'),
     path('', views.wapview, name='wap'),
+    path('mapshow',views.mapshow,name='map'),
+    path('templeone/<int:id>',views.templeone,name='templeone'),
+ 
+
  
 ]

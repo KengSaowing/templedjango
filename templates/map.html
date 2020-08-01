@@ -1,24 +1,43 @@
 {% extends 'base.html' %}
-{% load easy_maps_tags %}
-{% easy_map "Russia, Ekaterinburg, Mira 32" 300 400 %}
-{% easy_map address 200 200 5 using "map.html" %}
-{% load bootstrap3 %}
-{% block page %}
+{% block title %}
+    {{title}}
+{% endblock %}
+{% block content %}
 
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=&v=weekly"
-      defer
-    ></script>
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script src="./app.js"></script>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 500px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
   </head>
   <body>
+    <!--The div element for the map -->
     <div id="map"></div>
+    <script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: -25.344, lng: 131.036};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 4, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoWCzhEuog7NS84PJj0g5H07OXSTPPVMs&callback=initMap">
+    </script>
   </body>
 </html>
 

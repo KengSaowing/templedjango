@@ -79,6 +79,21 @@ class templeSelectViewSet(generics.ListAPIView):
         temple_id = self.kwargs['templeid']
         return models.temple.objects.filter(id=temple_id)
 
+def mapshow(request):
+    context = {
+        'title': "แผนที่แสดงวัด",
+    }
+    return render(request, 'map.html', context)
+
+def templeone(request, id):
+    temple = models.temple.objects.get(id=id)
+    context = {
+        'title': "ข้อมูลที่เลือก",
+        'temple': temple,
+    }
+    return render(request, 'view.html', context)
+
+
 class templeViewSet(generics.ListAPIView):
     queryset = models.temple.objects.all()
     serializer_class = TempleSerializer
