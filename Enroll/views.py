@@ -80,8 +80,10 @@ class templeSelectViewSet(generics.ListAPIView):
         return models.temple.objects.filter(id=temple_id)
 
 def mapshow(request):
+   
     context = {
         'title': "แผนที่แสดงวัด",
+    
     }
     return render(request, 'map.html', context)
 
