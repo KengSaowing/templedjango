@@ -95,6 +95,34 @@ def templeone(request, id):
     }
     return render(request, 'view.html', context)
 
+def multiplepoint(request):
+    temple_obj = models.temple.objects.all()
+    locations = []
+
+    for i, temple in enumerate(temple_obj):
+        dt = [
+            temple.name,
+            float(temple.latitude),
+            float(temple.Longitude),
+            int(i+1),
+            str(i+1)
+            ]
+        locations.append(dt)
+
+    context ={
+        "title": " แผนที่แสดงวัด",
+        "temple": temple_obj,
+        "locations":locations,
+    }
+    print(locations)
+    return render(request, 'multiplepoint.html', context)
+
+def multiplepoint_route(request):
+    context ={
+        "title": " แผนที่แสดงวัด"
+        
+    }
+    return render(request, 'multiplepoint_route.html', context)
 
 class templeViewSet(generics.ListAPIView):
     queryset = models.temple.objects.all()

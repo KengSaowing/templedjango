@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Google Maps Multiple Markers</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPr8A6Vo8Yjw2q1XCeD8wugso11614GKk&callback=initMap">
+  </script>
+</head>
+
+<body>
+  <div id="map" style="width: 600px; height: 450px;"></div>
+  
+  <script type="text/javascript">
+  
+    var locations = [
+    {% for location in locations %} 
+    {{location|safe}}, 
+    {% endfor %}
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(15.102055, 104.315271),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+ 
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function (marker, i) {
+        return function () {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+    
+  </script>
+  
+</body>
+
+</html>
+
+{% endblock %}

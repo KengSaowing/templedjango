@@ -27,16 +27,10 @@ function initMap() {
   var map = new google.maps.Map(
       document.getElementById('map'), {zoom: 10, center: uluru});
   // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-  var markerCluster = new MarkerClusterer(map, markers,
-            {imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-            var locations = [
-            {lat: -31.563910, lng: 147.154312},
-            ]
+  
+
 }
     </script>
-    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
-    
     <script defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtOeCui99jYwAViV_5f5ZF2u0pI8c4VhA&callback=initMap">
     </script>

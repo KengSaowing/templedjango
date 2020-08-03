@@ -8,8 +8,10 @@ urlpatterns = [
     path('Category_List',views.CategoryList, name='Category'),
     path('tem_List', views.temList, name='tem'),
     path('', views.wapview, name='wap'),
-    path('mapshow',views.mapshow,name='map'),
+    path('multiplepoint',views.multiplepoint,name='multiplepoint'),
     path('templeone/<int:id>',views.templeone,name='templeone'),
+    path('multiplepoint_route',views.multiplepoint_route,name='multiplepoint_route'),
+    
  
 
  
