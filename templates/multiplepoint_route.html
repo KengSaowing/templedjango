@@ -31,8 +31,7 @@
     var locations = [
     {% for location in locations %} 
     {{location|safe}}, 
-    {% endfor %}
-    ];
+    {% endfor %}];
 
     function initialize() {
       directionsDisplay = new google.maps.DirectionsRenderer();

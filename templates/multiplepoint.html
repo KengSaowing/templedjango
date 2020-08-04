@@ -50,7 +50,10 @@
     }
     
   </script>
-  
+  <a href="{% url 'GetDirection' %}" class="btn btn-info" role="button">ค้นหาวัดที่จะไปต่อ</a>
+  <a href="{% url 'multiplepoint' %}" class="btn btn-info" role="button">วัดแต่ละจุด</a>
+  <a href="{% url 'multiplepoint_route' %}" class="btn btn-info" role="button">วัดที่ใกล้ที่สุด</a>
+  <a href="{% url 'search' %}" class="btn btn-info" role="button">ค้นหาวัด</a>
 </body>
 
 </html>
