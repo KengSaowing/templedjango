@@ -11,6 +11,11 @@ urlpatterns = [
     path('multiplepoint',views.multiplepoint,name='multiplepoint'),
     path('templeone/<int:id>',views.templeone,name='templeone'),
     path('multiplepoint_route',views.multiplepoint_route,name='multiplepoint_route'),
+    path('GetDirection',views.GetDirection,name='GetDirection'),
+    path('marker',views.marker,name='marker'),
+    path('search',views.search,name='search'),
+    
+    
     
  
 

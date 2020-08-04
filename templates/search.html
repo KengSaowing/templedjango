@@ -1,0 +1,108 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <style type="text/css">
+html, body { 
+
+    height: 100%; 
+    
+    margin: 0; 
+    
+    padding: 0; 
+    
+    } 
+    
+    #yourmap { 
+    
+    height: 90%; 
+    
+    width: 100%; 
+    
+    } 
+    </style>
+    <body>
+        <a href="{% url 'home' %}" class="btn btn-info" role="button">กลับหน้าแรก</a>
+        <CENTER>
+        เริ่มต้น: <input type="text" name="source" id="source"> ปลายทาง: <input type="text" name="destination" id="destination"><br>
+         <br> <input class="btn btn-primary" type="button" value="ค้นหา" id="mybtn">
+        </CENTER>
+        <br>
+<div id="yourmap"></div>
+<script type="text/javascript">
+alert("drag little orange person on bottom  right to map and move phone for a 360 degree view")
+function loadMap() { 
+
+var lat_lang = {lat: 15.1746009, lng: 104.3951567}; 
+
+var directionsService = new google.maps.DirectionsService; 
+
+var directionsDisplay = new google.maps.DirectionsRenderer; 
+
+var map = new google.maps.Map(document.getElementById('yourmap'), { 
+
+zoom: 10, 
+
+center: lat_lang 
+
+});
+
+directionsDisplay.setMap(map); 
+
+ 
+
+var onClickHandler = function() { 
+
+calculateAndDisplayRoute(directionsService, directionsDisplay); 
+
+}; 
+
+document.getElementById('mybtn').addEventListener('click', onClickHandler); 
+
+ 
+
+}
+
+ 
+
+function calculateAndDisplayRoute(directionsService, directionsDisplay) { 
+
+directionsService.route({ 
+
+origin: document.getElementById('source').value, 
+
+destination: document.getElementById('destination').value, 
+
+travelMode: google.maps.TravelMode.DRIVING 
+
+}, function(response, status) { 
+
+if (status === google.maps.DirectionsStatus.OK) { 
+
+directionsDisplay.setDirections(response); 
+
+} else { 
+
+window.alert('Request for getting direction is failed due to ' + status); 
+
+} 
+
+}); 
+
+}
+
+</script>
+
+
+    </body>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=loadMap&key=AIzaSyCPr8A6Vo8Yjw2q1XCeD8wugso11614GKk" 
+
+async defer></script>
+
+
+</html>

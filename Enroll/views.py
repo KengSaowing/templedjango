@@ -118,12 +118,47 @@ def multiplepoint(request):
     return render(request, 'multiplepoint.html', context)
 
 def multiplepoint_route(request):
+    temple_obj = models.temple.objects.all()
+    locations = []
+
+    for i, temple in enumerate(temple_obj):
+        
+        dt = [
+            temple.name,
+            float(temple.latitude),
+            float(temple.Longitude),
+            int(i+1),
+            str(i+1)
+            ]
+        locations.append(dt)
     context ={
-        "title": " แผนที่แสดงวัด"
+        "title": " แผนที่แสดงวัด",
+        "locations":locations,
         
     }
     return render(request, 'multiplepoint_route.html', context)
 
+def GetDirection(request):
+    temple_obj = models.temple.objects.all()
+    context ={
+        "title": " แผนที่แสดงวัด",
+        "temple": temple_obj,
+        
+    }
+    return render(request, 'GetDirection.html', context)
+
+def marker(request):
+     context ={
+        "title": " แผนที่แสดงวัด",
+    }
+     return render(request, 'marker.html', context)
+
+def search(request):
+     context ={
+        "title": " แผนที่แสดงวัด",
+    }
+     return render(request, 'search.html', context)
+    
 class templeViewSet(generics.ListAPIView):
     queryset = models.temple.objects.all()
     serializer_class = TempleSerializer
