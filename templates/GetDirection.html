@@ -34,11 +34,7 @@
   <body>
     <div id="floating-panel">
     <b>Start: </b>
-    <select id="start">
-      {% for temple_obj in temple %}
-      <option value="{{temple_obj.name}}">{{temple_obj.name}}</option>
-      {% endfor %}
-    </select>
+      เริ่มต้น: <input type="text" name="source" id="start">
     <b>End: </b>
     <select id="end">
       {% for temple_obj in temple %}
