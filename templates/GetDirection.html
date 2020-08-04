@@ -33,6 +33,9 @@
   </head>
   <body>
     <div id="floating-panel">
+      <a href="{% url 'GetDirection' %}" class="btn btn-info" role="button">ค้นหาวัดที่จะไปต่อ</a>
+      <a href="{% url 'multiplepoint' %}" class="btn btn-info" role="button">วัดแต่ละจุด</a>
+      <a href="{% url 'multiplepoint_route' %}" class="btn btn-info" role="button">วัดที่ใกล้ที่สุด</a>
     <b>Start: </b>
       เริ่มต้น: <input type="text" name="source" id="start">
     <b>End: </b>
