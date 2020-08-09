@@ -14,8 +14,8 @@
   <p>เลือกประเภทวัด</p>
   {% for Category_obj in Category %}
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="radio" name="type" id="type" value="{{Category_obj.id}}">
-    <label class="form-check-label" for="inlineRadio1">{{Category_obj.name}}</label>
+    <input class="form-check-input" type="checkbox" name="type" id="type" value="{{Category_obj.id}}">
+    <label class="form-check-label" for="form-check-inline">{{Category_obj.name}}</label>
   </div>
   {% endfor %}
   <div class="dropdown-divider"></div>
@@ -29,7 +29,7 @@
     <img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{temple_obj.name}}</h5>
-      <p class="card-text">{{temple_obj.Monk}}</p>
+      <p class="card-text">{{temple_obj.Category}}</p>
       <a href="{% url 'templeone' temple_obj.id %}" class="btn btn-primary">เพิ่มเติม</a>
     </div>
   </div>

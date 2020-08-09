@@ -66,7 +66,7 @@ def wapview(request):
     context['Category'] = models.Category.objects.all()
     
     
-    return render(request, 'homepang.html', context)
+    return render(request, 'webview.html', context)
   
 class templeViewSet(generics.ListAPIView):
     serializer_class = TempleSerializer
@@ -79,13 +79,6 @@ class templeSelectViewSet(generics.ListAPIView):
         temple_id = self.kwargs['templeid']
         return models.temple.objects.filter(id=temple_id)
 
-def mapshow(request):
-   
-    context = {
-        'title': "แผนที่แสดงวัด",
-    
-    }
-    return render(request, 'map.html', context)
 
 def templeone(request, id):
     temple = models.temple.objects.get(id=id)
@@ -138,11 +131,18 @@ def multiplepoint_route(request):
     }
     return render(request, 'multiplepoint_route.html', context)
 
-def GetDirection(request):
-    temple_obj = models.temple.objects.all()
+def GetDirection(request, id):
+    temple = models.temple.objects.get(id=id)
+    if request.method == "POST":
+        if request.POST.get('lat') == "":
+           latitude = request.POST.get("latitude")
+           longitude = request.POST.get("longitude")
+        else:
+            latitude = 15.1181967
+            longitude = 104.3617369
     context ={
         "title": " แผนที่แสดงวัด",
-        "temple": temple_obj,
+        "temple": temple,
         
     }
     return render(request, 'GetDirection.html', context)

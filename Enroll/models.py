@@ -27,7 +27,7 @@ class temple(models.Model):
     latitude = models.CharField(max_length=255)
     Longitude = models.CharField(max_length=255)
     image = CloudinaryField('image')
-    Category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    Category = models.ManyToManyField(Category, blank=True)
 
 
     def __str__(self):
