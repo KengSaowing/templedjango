@@ -58,7 +58,11 @@ def wapview(request):
         by_name = Q(name__icontains=temp_name)
         by_type = Q(Category__id=temp_type)
 
-        context['temples'] = models.temple.objects.filter(by_name & by_type)
+        query = models.temple.objects.filter(by_name & by_type)
+
+        context['temples'] = query
+
+        print(query[0].Category.all())
 
     else:
         context['temples'] = models.temple.objects.all()

@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'rest_framework',
-    'easy_maps',
     'Enroll',
     
 ]
@@ -90,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'temple_DB',
         'USER': 'keng123',
-        'PASSWORD': '12345678',
+        'PASSWORD': '123456',
         'HOST': 'localhost',
         'PORT': '',
     }
