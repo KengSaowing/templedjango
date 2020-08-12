@@ -53,17 +53,17 @@ def wapview(request):
  
     if request.method == "POST":
         temp_name = request.POST.get('name')
-        temp_type = request.POST.get('type')
+        temp_type = request.POST.getlist('type')
         
         by_name = Q(name__icontains=temp_name)
-        by_type = Q(Category__id=temp_type)
+
+        if len(temp_type) > 0:
+            for tptype in temp_type:
+                by_type |= Q(Category__id=tptype)
 
         query = models.temple.objects.filter(by_name & by_type)
 
         context['temples'] = query
-
-        print(query[0].Category.all())
-
     else:
         context['temples'] = models.temple.objects.all()
 
@@ -162,6 +162,17 @@ def search(request):
         "title": " แผนที่แสดงวัด",
     }
      return render(request, 'search.html', context)
+
+def Results(request):
+    temple_obj = models.temple.objects.all()
+    context = {
+        "temples": temple_obj,
+    }
+    context ['title'] ="แหล่งรวมวัดจังหวัดศรีสะเกษ"
+    
+
+    return render(request, 'Results.html', context)
+
     
 class templeViewSet(generics.ListAPIView):
     queryset = models.temple.objects.all()

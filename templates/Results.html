@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+<div class="mb-4"></div>
+  
+<div class="card-columns">
+  {% for temple_obj in temples %}
+  <div class="card mb-4">
+    <img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{temple_obj.name}}</h5>
+
+      {% for cat in temple_obj.Category.all %}
+        <span class="card-text">{{cat.name}}</span>
+      {% endfor %}
+      
+      <a href="{% url 'templeone' temple_obj.id %}" class="btn btn-primary">เพิ่มเติม</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+  .card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+</style>
+{% endblock %}

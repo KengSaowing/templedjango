@@ -4,7 +4,7 @@
 {% endblock %}
 {% block content %}
 
-<form action="" method="POST">
+<form action="/Results" method="POST">
 {% csrf_token %}
 <div class="active-pink-3 active-pink-4 mb-4">
     <input class="form-control" type="text" placeholder="ค้นหา" name='name' aria-label="Search">
@@ -14,41 +14,12 @@
   <p>เลือกประเภทวัด</p>
   {% for Category_obj in Category %}
   <div class="form-check form-check-inline">
-    <input class="form-check-input" type="checkbox" name="type" id="type" value="{{Category_obj.id}}">
+    <input class="form-check-input" type="checkbox" name="type" value="{{Category_obj.id}}">
     <label class="form-check-label" for="form-check-inline">{{Category_obj.name}}</label>
   </div>
   {% endfor %}
   <div class="dropdown-divider"></div>
   <CENTER><input type="submit"  class="btn btn-primary btn-lg btn-block" value="ค้นหา"></CENTER>
 </form>
-<div class="mb-4"></div>
-  
-<div class="card-columns">
-  {% for temple_obj in temples %}
-  <div class="card mb-4">
-    <img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{temple_obj.name}}</h5>
-
-      {% for cat in temple_obj.Category.all %}
-        <span class="card-text">{{cat.name}}</span>
-      {% endfor %}
-      
-      <a href="{% url 'templeone' temple_obj.id %}" class="btn btn-primary">เพิ่มเติม</a>
-    </div>
-  </div>
-  {% endfor %}
-</div>
-
-<style>
-  .card-columns {
-    @include media-breakpoint-only(lg) {
-      column-count: 4;
-    }
-
-    @include media-breakpoint-only(xl) {
-      column-count: 5;
-    }
-  }
 </style>
 {% endblock %}
