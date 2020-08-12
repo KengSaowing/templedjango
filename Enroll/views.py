@@ -168,7 +168,7 @@ def Results(request):
     context = {
         "temples": temple_obj,
     }
-    context ['title'] ="แหล่งรวมวัดจังหวัดศรีสะเกษ"
+    context ['title'] ="ผลลัพธ์ของวัดที่ค้นหาได้"
     
 
     return render(request, 'Results.html', context)
