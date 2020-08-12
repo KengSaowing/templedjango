@@ -51,6 +51,7 @@ def wapview(request):
     by_name = Q()
     by_type = Q()
  
+    temp_name = ""
     if request.method == "POST":
         temp_name = request.POST.get('name')
         temp_type = request.POST.getlist('type')
