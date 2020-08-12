@@ -55,6 +55,7 @@ def wapview(request):
         temp_name = request.POST.get('name')
         temp_type = request.POST.getlist('type')
         
+    if temp_name !="":
         by_name = Q(name__icontains=temp_name)
 
         if len(temp_type) > 0:
