@@ -11,6 +11,7 @@ from rest_framework.response import Response
 from rest_framework import generics
 from django.db.models import Q
 
+
 # Create your views here.
 def Home(request):
     Category_obj = models.Category.objects.all().order_by('-id')[:1]
@@ -56,8 +57,8 @@ def wapview(request):
         temp_name = request.POST.get('name')
         temp_type = request.POST.getlist('type')
         
-    if temp_name !="":
-        by_name = Q(name__icontains=temp_name)
+        if temp_name !="":
+            by_name = Q(name__icontains=temp_name)
 
         if len(temp_type) > 0:
             for tptype in temp_type:
@@ -70,7 +71,6 @@ def wapview(request):
         context['temples'] = models.temple.objects.all()
 
     context['Category'] = models.Category.objects.all()
-    
     
     return render(request, 'webview.html', context)
   
