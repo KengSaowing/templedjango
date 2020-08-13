@@ -57,6 +57,7 @@ def Results(request):
  
     temp_name = ""
     query = ""
+    temple_list = []
 
     if request.method == "POST":
         temp_name = request.POST.get('name')
@@ -72,9 +73,12 @@ def Results(request):
                 by_type |= Q(Category__id=tptype)
 
         query = models.temple.objects.filter(by_name & by_type)
+        for temple in query:
+            temple_list.append(temple.id)
 
     context = {
         "temples": query,
+        "temples_id": ",".join(temple_list),
     }
     
     context ['title'] ="ผลลัพธ์ของวัดที่ค้นหาได้"
