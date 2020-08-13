@@ -47,7 +47,8 @@ def temList(request):
 
 def wapview(request): 
     context = {}
-    context ['title'] ="แหล่งรวมวัดจังหวัดศรีสะเกษ"    
+    context ['title'] ="แหล่งรวมวัดจังหวัดศรีสะเกษ"
+    context['Category'] = models.Category.objects.all()
     return render(request, 'webview.html', context)
 
 def Results(request):
@@ -75,7 +76,7 @@ def Results(request):
     context = {
         "temples": query,
     }
-
+    
     context ['title'] ="ผลลัพธ์ของวัดที่ค้นหาได้"
     
 
