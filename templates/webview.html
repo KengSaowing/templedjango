@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-    <h1>{{title}}</h1>
+    <h3>{{title}}</h3>
 {% endblock %}
 {% block content %}
 
@@ -9,7 +9,7 @@
 <div class="active-pink-3 active-pink-4 mb-4">
     <input class="form-control" type="text" placeholder="ค้นหา" name='name' aria-label="Search">
   </div>
-  <h2>เลือกประเภทวัด</h2>
+  <h5>เลือกประเภทวัด</h5>
   {% for Category_obj in Category %}
   <div class="form-check form-check-inline">
     <input class="form-check-input" type="checkbox" name="type" value="{{Category_obj.id}}">
