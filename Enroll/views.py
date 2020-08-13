@@ -73,8 +73,11 @@ def Results(request):
                 by_type |= Q(Category__id=tptype)
 
         query = models.temple.objects.filter(by_name & by_type)
-        for temple in query:
-            temple_list.append(temple.id)
+        
+        if len(query) > 0:
+            for temple in query:
+                print(temple.id)
+                temple_list.append(str(temple.id))
 
     context = {
         "temples": query,
