@@ -56,7 +56,7 @@ def wapview(request):
     if request.method == "POST":
         temp_name = request.POST.get('name')
         temp_type = request.POST.getlist('type')
-        
+ 
         if temp_name !="":
             by_name = Q(name__icontains=temp_name)
 
@@ -73,7 +73,38 @@ def wapview(request):
     context['Category'] = models.Category.objects.all()
     
     return render(request, 'webview.html', context)
-  
+
+def Results(request):
+    by_name = Q()
+    by_type = Q()
+ 
+    temp_name = ""
+    query = ""
+
+    if request.method == "POST":
+        temp_name = request.POST.get('name')
+        temp_type = request.POST.getlist('type')
+
+        print(temp_type)
+ 
+        if temp_name !="":
+            by_name = Q(name__icontains=temp_name)
+
+        if len(temp_type) > 0:
+            for tptype in temp_type:
+                by_type |= Q(Category__id=tptype)
+
+        query = models.temple.objects.filter(by_name & by_type)
+
+    context = {
+        "temples": query,
+    }
+    
+    context ['title'] ="ผลลัพธ์ของวัดที่ค้นหาได้"
+    
+
+    return render(request, 'Results.html', context)
+
 class templeViewSet(generics.ListAPIView):
     serializer_class = TempleSerializer
     def get_queryset(self):
@@ -164,16 +195,6 @@ def search(request):
         "title": " แผนที่แสดงวัด",
     }
      return render(request, 'search.html', context)
-
-def Results(request):
-    temple_obj = models.temple.objects.all()
-    context = {
-        "temples": temple_obj,
-    }
-    context ['title'] ="ผลลัพธ์ของวัดที่ค้นหาได้"
-    
-
-    return render(request, 'Results.html', context)
 
     
 class templeViewSet(generics.ListAPIView):
