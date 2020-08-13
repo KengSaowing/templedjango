@@ -79,6 +79,13 @@ def Results(request):
                 print(temple.id)
                 temple_list.append(str(temple.id))
 
+    if request.method == "POST":
+        if request.POST.get('lat') == "":
+           latitude = request.POST.get("latitude")
+           longitude = request.POST.get("longitude")
+        else:
+            latitude = 15.1181967
+            longitude = 104.3617369
     context = {
         "temples": query,
         "temples_id": ",".join(temple_list),
