@@ -47,31 +47,7 @@ def temList(request):
 
 def wapview(request): 
     context = {}
-    context ['title'] ="แหล่งรวมวัดจังหวัดศรีสะเกษ"
-
-    by_name = Q()
-    by_type = Q()
- 
-    temp_name = ""
-    if request.method == "POST":
-        temp_name = request.POST.get('name')
-        temp_type = request.POST.getlist('type')
- 
-        if temp_name !="":
-            by_name = Q(name__icontains=temp_name)
-
-        if len(temp_type) > 0:
-            for tptype in temp_type:
-                by_type |= Q(Category__id=tptype)
-
-        query = models.temple.objects.filter(by_name & by_type)
-
-        context['temples'] = query
-    else:
-        context['temples'] = models.temple.objects.all()
-
-    context['Category'] = models.Category.objects.all()
-    
+    context ['title'] ="แหล่งรวมวัดจังหวัดศรีสะเกษ"    
     return render(request, 'webview.html', context)
 
 def Results(request):
@@ -99,7 +75,7 @@ def Results(request):
     context = {
         "temples": query,
     }
-    
+
     context ['title'] ="ผลลัพธ์ของวัดที่ค้นหาได้"
     
 
