@@ -172,10 +172,13 @@ def multiplepoint_route(request):
             locations.append(dt)
 
     sequenced = shortestPath(locations)
+    locations_new = []
+    for i in sequenced:
+        locations_new.append(locations[i])
 
     context ={
         "title": " แผนที่แสดงวัด",
-        "locations":sequenced[:4],
+        "locations":locations_new,
         
     }
     
