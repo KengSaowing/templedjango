@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
-<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
 {% block title %}
     {{title}}
 {% endblock %}
 
 {% block content %}
+
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
 <form method="post" action="/multiplepoint_route">
     {% csrf_token %}  
     <input type="hidden" name="latitude" id="latitude" value="">
@@ -32,7 +34,7 @@
           long.value = position.coords.longitude;
       }
   </script>
-<br></br>
+<br>
 
 <div class="mb-4"></div>
   

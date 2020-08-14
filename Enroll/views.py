@@ -10,6 +10,7 @@ from .serializers import CategorySerializer
 from rest_framework.response import Response
 from rest_framework import generics
 from django.db.models import Q
+from scipy.spatial import distance
 
 
 # Create your views here.
@@ -139,24 +140,43 @@ def multiplepoint(request):
     return render(request, 'multiplepoint.html', context)
 
 def multiplepoint_route(request):
-    temple_obj = models.temple.objects.all()
     locations = []
+    
+    if request.method == "POST":
+        templeList = request.POST.get("temple_id")
+        lat = request.POST.get("latitude")
+        long = request.POST.get("longitude")
 
-    for i, temple in enumerate(temple_obj):
-        
         dt = [
-            temple.name,
-            float(temple.latitude),
-            float(temple.Longitude),
-            int(i+1),
-            str(i+1)
-            ]
+            "start",
+            float(lat),
+            float(long),
+            0,
+            0,
+        ]
+
         locations.append(dt)
+
+        temple_obj = models.temple.objects.all()
+        
+        for i, temple in enumerate(temple_obj[:4]):
+            dt = [
+                temple.name,
+                float(temple.latitude),
+                float(temple.Longitude),
+                int(i+1),
+                str(i+1)
+            ]
+            
+            locations.append(dt)
+
     context ={
         "title": " แผนที่แสดงวัด",
         "locations":locations,
         
     }
+    
+
     return render(request, 'multiplepoint_route.html', context)
 
 def GetDirection(request, id):
