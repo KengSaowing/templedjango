@@ -171,22 +171,11 @@ def multiplepoint_route(request):
             
             locations.append(dt)
 
-        # temple_obj = models.temple.objects.all()
-        
-        # for i, temple in enumerate(temple_obj[:4]):
-        #     dt = [
-        #         temple.name,
-        #         float(temple.latitude),
-        #         float(temple.Longitude),
-        #         int(i+1),
-        #         str(i+1)
-        #     ]
-            
-        #     locations.append(dt)
+    sequenced = shortestPath(locations)
 
     context ={
         "title": " แผนที่แสดงวัด",
-        "locations":locations,
+        "locations":sequenced,
         
     }
     
@@ -230,4 +219,35 @@ class CategorySerializer(ModelViewSet):
     queryset = models.Category.objects.all()
     serializer_class = CategorySerializer
 
+def shortestPath(locations):
+    nearest = 0
+    visited = []
+    sequence = []
+
+    for i in range(0, len(locations)):
+        dst_shortest = 10000
+        point_shortest = 0
+
+        if i == 0:
+            point = i
+        else:
+            point = nearest
+        
+        visited.append(point)
+        sequence.append(point)
+
+        start = (locations[point][1], locations[i][2])
+            
+        for j in range(0, len(locations)):
+            if point != j and j not in visited:
+                end = (locations[j][1], locations[j][2])
+                dst = distance.euclidean(start, end)
+
+                if dst < dst_shortest:
+                    dst_shortest = dst
+                    point_shortest = j
+
+        nearest  = point_shortest
+        
+    return sequence
 
