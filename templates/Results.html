@@ -98,8 +98,9 @@
       {% for cat in temple_obj.Category.all %}
         <span class="card-text">{{cat.name}}</span>
       {% endfor %}
-      
+      <div>
       <a href="{% url 'templeone' temple_obj.id %}" class="btn btn-primary">เพิ่มเติม</a>
+      </div>
     </div>
   </div>
   {% endfor %}
