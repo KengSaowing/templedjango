@@ -147,8 +147,6 @@ def multiplepoint_route(request):
         lat_point = request.POST.get("latitude")
         long_point = request.POST.get("longitude")
 
-        print(long_point)
-
         dt = [
             "start",
             float(lat_point),
@@ -159,9 +157,10 @@ def multiplepoint_route(request):
 
         locations.append(dt)
 
-        temple_obj = models.temple.objects.all()
-        
-        for i, temple in enumerate(temple_obj[:4]):
+        # Get id form templeList
+        lt = templeList.split(",")
+        for i, id in enumerate(lt):
+            temple = models.temple.objects.get(id=id)
             dt = [
                 temple.name,
                 float(temple.latitude),
@@ -171,6 +170,19 @@ def multiplepoint_route(request):
             ]
             
             locations.append(dt)
+
+        # temple_obj = models.temple.objects.all()
+        
+        # for i, temple in enumerate(temple_obj[:4]):
+        #     dt = [
+        #         temple.name,
+        #         float(temple.latitude),
+        #         float(temple.Longitude),
+        #         int(i+1),
+        #         str(i+1)
+        #     ]
+            
+        #     locations.append(dt)
 
     context ={
         "title": " แผนที่แสดงวัด",
