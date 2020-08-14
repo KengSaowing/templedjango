@@ -175,7 +175,7 @@ def multiplepoint_route(request):
 
     context ={
         "title": " แผนที่แสดงวัด",
-        "locations":sequenced,
+        "locations":sequenced[:4],
         
     }
     
