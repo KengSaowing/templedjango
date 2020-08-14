@@ -87,9 +87,25 @@ def Results(request):
         else:
             latitude = 15.1181967
             longitude = 104.3617369
+    
+    # 
+    locations = []
+
+    for i, temple in enumerate(query):
+        dt = [
+            temple.name,
+            float(temple.latitude),
+            float(temple.Longitude),
+            int(i+1),
+            str(i+1)
+        ]
+        
+        locations.append(dt)
+
     context = {
         "temples": query,
         "temples_id": ",".join(temple_list),
+        "locations": locations,
     }
     
     context ['title'] ="ผลลัพธ์ของวัดที่ค้นหาได้"
@@ -175,6 +191,7 @@ def multiplepoint_route(request):
     locations_new = []
     for i in sequenced:
         locations_new.append(locations[i])
+
 
     context ={
         "title": " แผนที่แสดงวัด",
