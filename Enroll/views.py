@@ -144,13 +144,15 @@ def multiplepoint_route(request):
     
     if request.method == "POST":
         templeList = request.POST.get("temple_id")
-        lat = request.POST.get("latitude")
-        long = request.POST.get("longitude")
+        lat_point = request.POST.get("latitude")
+        long_point = request.POST.get("longitude")
+
+        print(long_point)
 
         dt = [
             "start",
-            float(lat),
-            float(long),
+            float(lat_point),
+            float(long_point),
             0,
             0,
         ]
