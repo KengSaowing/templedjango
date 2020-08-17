@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
-<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+
 {% block content %}
   {% block temple %}
-  
+  <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <body onload="getLocation()">
   <div class="container">
     <CENTER>
     <h2>{{temple.name}}</h2>
@@ -13,10 +16,35 @@
     <hr class="sidebar-divider">
     <p>พระเกจิ {{temple.Monk}}</p>
     <p>{{temple.Details}}</p>
-    <CENTER>
-    <a href="{% url 'wap' %}" class="btn btn-info btn-lg" role="button">กลับ</a>
-    <a href="{% url 'GetDirection' temple.id %}" class="btn btn-success btn-lg" role="button">ขอเส้นทาง</a>
-  </CENTER>
+    <br>
+     <form method="post" action="{% url 'GetDirection' temple.id %}">
+    {% csrf_token %}  
+    <input type="hidden" name="latitude" id="latitude" value="">
+    <input type="hidden" name="longitude" id="longitude" value="">
+    <input type="submit" value="ขอเส้นทาง" class="btn btn-success btn-lg">
+      <a href="{% url 'wap' %}" class="btn btn-info btn-lg" role="button">กลับ</a>
+</form>
   </div>
+  </body>
+
+ 
+  
+    <script>
+      var lat = document.getElementById("latitude");
+      var long = document.getElementById("longitude");
+
+      function getLocation() {
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition);
+          } else { 
+              x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+      }
+
+      function showPosition(position) {
+          lat.value = position.coords.latitude;
+          long.value = position.coords.longitude;
+      }
+  </script>
  {% endblock %}
 {% endblock %}

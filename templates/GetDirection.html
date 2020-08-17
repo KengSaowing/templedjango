@@ -1,160 +1,75 @@
-{% block title %}
-    {{title}} 
-{% endblock %}
-
-{% block content %}
 <!DOCTYPE html>
-<html lang="en">
-  {% load static %}
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Directions Service</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-      width: 100%;
-      height:100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #floating-panel {
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<title>Google Map</title>
+</head>
+<style type="text/css">
+	#map{
+		height: 99%;
+	}
+	html , body {
+		height: 100%;
+	}
+	 #floating-panel {
         position: absolute;
-        top: 10px;
-        left: 25%;
+        top: 500px;
+        left: 1%;
         z-index: 5;
         background-color: #fff;
         padding: 5px;
         border: 1px solid #999;
         text-align: center;
-        font-family: 'Roboto','sans-serif';
+        font-family: "Roboto", "sans-serif";
         line-height: 30px;
         padding-left: 10px;
       }
-    </style>
-  </head>
-  <br>
-  <
-    body  id="page-top" onload="getLocation()">
-    <br>
-    <div class="col-lg-12 mt-4 mb-4">
-      <div class="mb-2">
-        <br>
-        <form method="post" action="/multiplepoint_route">
-              {% csrf_token %}  
-              <input type="hidden" name="latitude" id="latitude" value="">
-              <input type="hidden" name="longitude" id="longitude" value="">
-              <button type="submit" class="btn btn-success" >ค้นหาวัดที่ใกล้ที่สุด</button>
-          </form>
-  </div>
-    </div>
-    <div id="map"></div>
-    <script>
-      "use strict";
 
-// Note: This example requires that you consent to location sharing when
-// prompted by your browser. If you see the error "The Geolocation service
-// failed.", it means you probably did not give permission for the browser to
-// locate you.
-let map, infoWindow;
-      function initMap() {
-        var location[
-        {% block temple %}
-        {{temple.name}}
-        {% endblock %}
-        ];
-        var directionsService = new google.maps.DirectionsService;
-        var directionsDisplay = new google.maps.DirectionsRenderer;
-         map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 16,
-          center: {lat:15.037529 , lng: 104.0805234}
-        });
-        infoWindow = new google.maps.InfoWindow();
-        directionsDisplay.setMap(map);
-
-        var onChangeHandler = function() {
-          calculateAndDisplayRoute(directionsService, directionsDisplay);
-        };
-        document.getElementById('pos').addEventListener('change', onChangeHandler);
-        document.getElementById('location').addEventListener('change', onChangeHandler);
-      }
-    
-      function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-        directionsService.route({
-          origin: document.getElementById('pos').value,
-          destination: document.getElementById('location').value,
-          travelMode: 'DRIVING'
-        }, function(response, status) {
-          if (status === 'OK') {
-            directionsDisplay.setDirections(response);
-          } else {
-            window.alert('กรุณาเลือกข้อมูลก่อน ' + status);
-          }
-        });
-      }
-      if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(
-            position => {
-              const pos = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-              };
-              infoWindow.setPosition(pos);
-              infoWindow.setContent("อยู่นี่");
-              infoWindow.open(map);
-              map.setCenter(pos);
-            },
-            () => {
-              handleLocationError(true, infoWindow, map.getCenter());
-            }
-          );
-        } else {
-          // Browser doesn't support Geolocation
-          handleLocationError(false, infoWindow, map.getCenter());
-        }
-         function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-        infoWindow.setPosition(pos);
-        infoWindow.setContent(
-          browserHasGeolocation
-            ? "Error: The Geolocation service failed."
-            : "Error: Your browser doesn't support geolocation."
-        );
-        infoWindow.open(map);
-      }
-    </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPr8A6Vo8Yjw2q1XCeD8wugso11614GKk&callback=initMap">
-    </script>
-    <div id="map"></div>
-    <script>
-      var lat = document.getElementById("latitude");
-      var long = document.getElementById("longitude");
-
-      function getLocation() {
-          if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(showPosition);
-          } else { 
-              x.innerHTML = "Geolocation is not supported by this browser.";
-          }
-      }
-
-      function showPosition(position) {
-          lat.value = position.coords.latitude;
-          long.value = position.coords.longitude;
-      }
-  </script>
-  </body>
-  
+</style>
+<body onload="myfunction();">
+<div id="floating-panel">
+			<input type="button" value="แสดงเส้นทาง" name="btn" class="btn btn-success" id="getdirection" />
+			 <a href="{% url 'wap' %}"class="btn btn-primary" role="button">กลับหน้าแรก</a>
+	</div>
+</div>
+<div id="map">
+</div>
+</body>
 </html>
-{% endblock %}
+<script type="text/javascript">
+	function myfunction(){
+		var map;
+		var me = new google.maps.LatLng( {{temple.lat_me}}, {{temple.log_me}});
+		var to = new google.maps.LatLng({% block temple %}
+		{{temple.latitude}},
+		{{temple.Longitude}}
+		{% endblock %});
+		var option ={
+			zoom : 10,
+			center : me 
+		};
+		map = new google.maps.Map(document.getElementById('map'),option);
+		var display = new google.maps.DirectionsRenderer();
+		var services = new google.maps.DirectionsService();
+		display.setMap(map);
+		function calculateroute(){
+			var request ={
+				origin : me,
+				destination: to,
+				travelMode: 'DRIVING'
+			};
+			services.route(request,function(result,status){
+				//console.log(result,status);
+				if(status =='OK'){
+					display.setDirections(result);
+				}
+			});
+		}
+		document.getElementById('getdirection').onclick= function(){
+			calculateroute();
+		}
+	}
+</script>
+<!-- google map api -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPr8A6Vo8Yjw2q1XCeD8wugso11614GKk&libraries=places"></script>

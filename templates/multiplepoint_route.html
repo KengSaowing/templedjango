@@ -1,6 +1,7 @@
 
 <html>
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title>Google Maps Multiple Markers</title>
@@ -16,11 +17,26 @@
       margin: 0px;
       padding: 0px
     }
+    #floating-panel {
+        position: absolute;
+        top: 500px;
+        left: 1%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: "Roboto", "sans-serif";
+        line-height: 30px;
+        padding-left: 10px;
+      }
   </style>
 </head>
 
 <body>
-  <a href="{% url 'home' %}" class="btn btn-info" role="button">กลับหน้าแรก</a>
+<div id="floating-panel">
+			 <a href="{% url 'wap' %}"class="btn btn-primary" role="button">กลับหน้าแรก</a>
+	</div>
   <div id="map"></div>
   
   <script type="text/javascript">

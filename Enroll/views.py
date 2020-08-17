@@ -127,6 +127,13 @@ class templeSelectViewSet(generics.ListAPIView):
 
 def templeone(request, id):
     temple = models.temple.objects.get(id=id)
+    if request.method == "POST":
+        if request.POST.get('lat') == "":
+           latitude = request.POST.get("latitude")
+           longitude = request.POST.get("longitude")
+        else:
+            latitude = 15.1181967
+            longitude = 104.3617369
     context = {
         'title': "ข้อมูลที่เลือก",
         'temple': temple,
@@ -204,18 +211,20 @@ def multiplepoint_route(request):
 
 def GetDirection(request, id):
     temple = models.temple.objects.get(id=id)
+    locations = []
+    
     if request.method == "POST":
-        if request.POST.get('lat') == "":
-           latitude = request.POST.get("latitude")
-           longitude = request.POST.get("longitude")
-        else:
-            latitude = 15.1181967
-            longitude = 104.3617369
+        temple.lat_me = request.POST.get("latitude")
+        temple.log_me = request.POST.get("longitude")
+
+
     context ={
         "title": " แผนที่แสดงวัด",
-        "temple": temple,
+        "temple":temple,
+        "locations":locations,
         
     }
+    
     return render(request, 'GetDirection.html', context)
 
 def marker(request):
@@ -224,13 +233,6 @@ def marker(request):
     }
      return render(request, 'marker.html', context)
 
-def search(request):
-     context ={
-        "title": " แผนที่แสดงวัด",
-    }
-     return render(request, 'search.html', context)
-
-    
 class templeViewSet(generics.ListAPIView):
     queryset = models.temple.objects.all()
     serializer_class = TempleSerializer
