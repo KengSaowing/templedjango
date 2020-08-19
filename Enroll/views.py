@@ -47,6 +47,12 @@ def temList(request):
     return render(request, 'tem.html', context)
 
 def wapview(request): 
+    
+    if request.GET.get('lat') !="":
+        
+        request.session['my_lat'] = request.GET.get('lat')
+        request.session['my_long'] = request.GET.get('long')
+
     context = {}
     context ['title'] ="แหล่งรวมวัดจังหวัดศรีสะเกษ"
     context['Category'] = models.Category.objects.all()
@@ -79,15 +85,16 @@ def Results(request):
             for temple in query:
                 print(temple.id)
                 temple_list.append(str(temple.id))
+                
+        if request.session.get('lat',True):
+            latitude = request.session['my_lat']
+            longitude = request.session['my_long']
+            print(latitude)
+            print(longitude)
+        else :
+            latitude = request.POST.get("latitude")
+            longitude = request.POST.get("longitude")
 
-    if request.method == "POST":
-        if request.POST.get('lat') == "":
-           latitude = request.POST.get("latitude")
-           longitude = request.POST.get("longitude")
-        else:
-            latitude = 15.1181967
-            longitude = 104.3617369
-    
     # 
     locations = []
 
@@ -127,13 +134,15 @@ class templeSelectViewSet(generics.ListAPIView):
 
 def templeone(request, id):
     temple = models.temple.objects.get(id=id)
-    if request.method == "POST":
-        if request.POST.get('lat') == "":
-           latitude = request.POST.get("latitude")
-           longitude = request.POST.get("longitude")
-        else:
-            latitude = 15.1181967
-            longitude = 104.3617369
+    if request.session.get('lat',True):
+        latitude = request.session['my_lat']
+        longitude = request.session['my_long']
+        print(latitude)
+        print(longitude)
+    else :
+        latitude = request.POST.get("latitude")
+        longitude = request.POST.get("longitude")
+            
     context = {
         'title': "ข้อมูลที่เลือก",
         'temple': temple,
@@ -143,6 +152,7 @@ def templeone(request, id):
 def multiplepoint(request):
     temple_obj = models.temple.objects.all()
     locations = []
+    
 
     for i, temple in enumerate(temple_obj):
         dt = [
@@ -153,6 +163,7 @@ def multiplepoint(request):
             str(i+1)
             ]
         locations.append(dt)
+
 
     context ={
         "title": " แผนที่แสดงวัด",
@@ -167,8 +178,20 @@ def multiplepoint_route(request):
     
     if request.method == "POST":
         templeList = request.POST.get("temple_id")
-        lat_point = request.POST.get("latitude")
-        long_point = request.POST.get("longitude")
+     
+
+        if request.session.get('lat',True):
+            lat_point = request.session['my_lat']
+            long_point = request.session['my_long']
+            print(lat_point)
+            print(long_point)
+
+        else :
+            print(request.POST.get("latitude"))
+            print(request.POST.get("longitude"))
+            lat_point = request.POST.get("latitude")
+            long_point = request.POST.get("longitude")
+            
 
         dt = [
             "start",
@@ -212,10 +235,17 @@ def multiplepoint_route(request):
 def GetDirection(request, id):
     temple = models.temple.objects.get(id=id)
     locations = []
-    
-    if request.method == "POST":
+    if request.session.get('lat',True):
+        temple.lat_me = request.session['my_lat']
+        temple.log_me = request.session['my_long']
+        print(temple.lat_me)
+        print(temple.log_me)
+    else :
+        print(request.POST.get("latitude"))
+        print(request.POST.get("longitude"))
         temple.lat_me = request.POST.get("latitude")
         temple.log_me = request.POST.get("longitude")
+
 
 
     context ={
