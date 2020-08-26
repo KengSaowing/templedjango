@@ -144,6 +144,7 @@ class templeSelectViewSet(generics.ListAPIView):
 
 def templeone(request, id):
     temple = models.temple.objects.get(id=id)
+
     if request.session.get('lat',True):
         latitude = request.session['my_lat']
         longitude = request.session['my_long']
@@ -153,10 +154,6 @@ def templeone(request, id):
         latitude = request.POST.get("latitude")
         longitude = request.POST.get("longitude")
 
-    if request.method == "POST":
-        if request.POST.get('lat') == "":
-           latitude = request.POST.get("latitude")
-           longitude = request.POST.get("longitude")
            
     context = {
         'title': "ข้อมูลที่เลือก",
@@ -200,12 +197,10 @@ def multiplepoint_route(request):
             print(long_point)
 
         else :
-              if request.method == "POST":
-                    if request.POST.get('lat') == "":
-                        lat_point = request.POST.get("latitude")
-                        long_point = request.POST.get("longitude")
-                        print(lat_point)
-                        print(long_point)
+            lat_point = request.POST.get("latitude")
+            ong_point = request.POST.get("longitude")
+            print(lat_point)
+            print(long_point)
 
         dt = [
             "start",
@@ -259,9 +254,7 @@ def GetDirection(request, id):
         print(request.POST.get("longitude"))
         temple.lat_me = request.POST.get("latitude")
         temple.log_me = request.POST.get("longitude")
-    if request.method == "POST":
-        temple.lat_me = request.POST.get("latitude")
-        temple.log_me = request.POST.get("longitude")
+   
 
 
 
