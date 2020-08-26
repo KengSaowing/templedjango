@@ -48,10 +48,16 @@ def temList(request):
 
 def wapview(request): 
     
-    if request.GET.get('lat') !="":
-        
+    if request.GET.get('lat') != None:
+        print('lat')
         request.session['my_lat'] = request.GET.get('lat')
         request.session['my_long'] = request.GET.get('long')
+
+        if request.session.get('lat',True):
+            latitude = request.session['my_lat']
+            longitude = request.session['my_long']
+            print(latitude)
+            print(longitude)
 
     context = {}
     context ['title'] ="แหล่งรวมวัดจังหวัดศรีสะเกษ"
