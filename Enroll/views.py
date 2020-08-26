@@ -98,8 +98,12 @@ def Results(request):
             print(latitude)
             print(longitude)
         else :
-            latitude = request.POST.get("latitude")
-            longitude = request.POST.get("longitude")
+            if request.POST.get('lat') == "":
+                latitude = request.POST.get("latitude")
+                longitude = request.POST.get("longitude")
+                print(latitude)
+                print(longitude)
+        
 
     # 
     locations = []
@@ -148,7 +152,12 @@ def templeone(request, id):
     else :
         latitude = request.POST.get("latitude")
         longitude = request.POST.get("longitude")
-            
+
+    if request.method == "POST":
+        if request.POST.get('lat') == "":
+           latitude = request.POST.get("latitude")
+           longitude = request.POST.get("longitude")
+           
     context = {
         'title': "ข้อมูลที่เลือก",
         'temple': temple,
@@ -181,10 +190,8 @@ def multiplepoint(request):
 
 def multiplepoint_route(request):
     locations = []
-    
     if request.method == "POST":
         templeList = request.POST.get("temple_id")
-     
 
         if request.session.get('lat',True):
             lat_point = request.session['my_lat']
@@ -193,11 +200,12 @@ def multiplepoint_route(request):
             print(long_point)
 
         else :
-            print(request.POST.get("latitude"))
-            print(request.POST.get("longitude"))
-            lat_point = request.POST.get("latitude")
-            long_point = request.POST.get("longitude")
-            
+              if request.method == "POST":
+                    if request.POST.get('lat') == "":
+                        lat_point = request.POST.get("latitude")
+                        long_point = request.POST.get("longitude")
+                        print(lat_point)
+                        print(long_point)
 
         dt = [
             "start",
@@ -226,7 +234,7 @@ def multiplepoint_route(request):
     sequenced = shortestPath(locations)
     locations_new = []
     for i in sequenced:
-        locations_new.append(locations[i:26])
+        locations_new.append(locations[i])
 
 
     context ={
@@ -249,6 +257,9 @@ def GetDirection(request, id):
     else :
         print(request.POST.get("latitude"))
         print(request.POST.get("longitude"))
+        temple.lat_me = request.POST.get("latitude")
+        temple.log_me = request.POST.get("longitude")
+    if request.method == "POST":
         temple.lat_me = request.POST.get("latitude")
         temple.log_me = request.POST.get("longitude")
 
