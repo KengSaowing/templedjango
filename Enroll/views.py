@@ -87,7 +87,8 @@ def Results(request):
         
         if len(query) > 0:
             for temple in query:
-                temple_list.append(str(temple.id))
+                if str(temple.id) not in temple_list:
+                    temple_list.append(str(temple.id))
                 
         if request.session['my_lat'] != None:
             latitude = request.session['my_lat']
@@ -98,17 +99,19 @@ def Results(request):
     
     # 
     locations = []
-
+    check = []
     for i, temple in enumerate(query):
-        dt = [
-            temple.name,
-            float(temple.latitude),
-            float(temple.Longitude),
-            int(i+1),
-            str(i+1)
-        ]
-        
-        locations.append(dt)
+        if temple.id not in check:
+            print(temple.id)
+            check.append(temple.id)
+            dt = [
+                temple.name,
+                float(temple.latitude),
+                float(temple.Longitude),
+                int(i+1),
+                str(i+1)
+            ]
+            locations.append(dt)
 
     context = {
         "temples": query,
@@ -184,16 +187,9 @@ def multiplepoint_route(request):
         if request.session['my_lat'] != None:
             lat_point = request.session['my_lat']
             long_point = request.session['my_long']
-            print("Session")
-            print(lat_point)
-            print(long_point)
-
         else :
             lat_point = request.POST.get("latitude")
             long_point = request.POST.get("longitude")
-            print("No Session")
-            print(lat_point)
-            print(long_point)
 
         dt = [
             "start",
@@ -218,7 +214,7 @@ def multiplepoint_route(request):
             ]
             
             locations.append(dt)
-
+    
     sequenced = shortestPath(locations)
     locations_new = []
     for i in sequenced:
@@ -227,10 +223,11 @@ def multiplepoint_route(request):
 
     context ={
         "title": " แผนที่แสดงวัด",
-        "locations":locations_new,
-        
+        "locations":locations_new,   
     }
     
+    for i in locations_new:
+        print(i)
 
     return render(request, 'multiplepoint_route.html', context)
 
