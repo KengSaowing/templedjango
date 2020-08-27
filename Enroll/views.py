@@ -75,8 +75,6 @@ def Results(request):
     if request.method == "POST":
         temp_name = request.POST.get('name')
         temp_type = request.POST.getlist('type')
-
-        print(temp_type)
  
         if temp_name !="":
             by_name = Q(name__icontains=temp_name)
@@ -89,22 +87,15 @@ def Results(request):
         
         if len(query) > 0:
             for temple in query:
-                print(temple.id)
                 temple_list.append(str(temple.id))
                 
-        if request.session.get('lat',True):
+        if request.session['my_lat'] != None:
             latitude = request.session['my_lat']
             longitude = request.session['my_long']
-            print(latitude)
-            print(longitude)
         else :
-            if request.POST.get('lat') == "":
-                latitude = request.POST.get("latitude")
-                longitude = request.POST.get("longitude")
-                print(latitude)
-                print(longitude)
-        
-
+            latitude = request.POST.get("latitude")
+            longitude = request.POST.get("longitude")
+    
     # 
     locations = []
 
@@ -190,15 +181,17 @@ def multiplepoint_route(request):
     if request.method == "POST":
         templeList = request.POST.get("temple_id")
 
-        if request.session.get('lat',True):
+        if request.session['my_lat'] != None:
             lat_point = request.session['my_lat']
             long_point = request.session['my_long']
+            print("Session")
             print(lat_point)
             print(long_point)
 
         else :
             lat_point = request.POST.get("latitude")
-            ong_point = request.POST.get("longitude")
+            long_point = request.POST.get("longitude")
+            print("No Session")
             print(lat_point)
             print(long_point)
 
