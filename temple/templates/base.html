@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="{% static 'img/logo/sskru.png'%}" rel="icon">
+  <title>แหล่งรวมวัดในจังหวัดศรีสะเกษ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt&family=Sarabun:wght@300&display=swap" rel="stylesheet">
+  <link href="{% static 'vendor/fontawesome-free/css/all.min.css'%}" rel="stylesheet" type="text/css">
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/ruang-admin.min.css'%}" rel="stylesheet">
+  <script src="{% static "jquery3/jquery.js" %}"></script>
+  <script src="{% static "jquery3/plugins/jquery.cookie.js" %}"></script>
+
+  <style>
+    h1 {
+      font-family: 'Prompt', sans-serif!important;
+    }
+    body {
+      font-family: 'Sarabun', sans-serif!important;
+    }
+  </style>
+</head>
+
+<body id="page-top">
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'wap' %}">
+        <div class="sidebar-brand-icon">
+          <img src="{% static 'img/logo/sskru.png'%}">
+        </div>
+        <div class="sidebar-brand-icon">
+        </div>
+        <div class="sidebar-brand-text mx-3">แหล่งรวมวัดในจังหวัดศรีสะเกษ</div>
+      </a>
+      <hr class="sidebar-divider my-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'home' %}">
+          <i class='fas fa-mosque'></i>
+          <span>ข้อมูลวัด</span></a>
+      </li>
+      <hr class="sidebar-divider">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'temple' %}">
+          <i class='fas fa-place-of-worship'></i>
+          <span>รีวิววัด</span></a>
+      </li>
+      <hr class="sidebar-divider">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">
+          <i class='fas fa-map'></i>
+          <span>แผนที่</span></a>
+      </li>
+      <hr class="sidebar-divider">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTable" aria-expanded="true"
+          aria-controls="collapseTable">
+          <i class="fa fa-table"></i>
+          <span>ตารางข้อมูล</span>
+        </a>
+        <div id="collapseTable" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">ตารางข้อมูล</h6>
+            <a class="collapse-item" href="{% url 'tem' %}">ตารางวัด</a>
+            <a class="collapse-item" href="{% url 'Category' %}">ตารางประเภท</a>
+            
+          </div>
+        </div>
+        <hr class="sidebar-divider">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'admin:login' %}">
+            <i class='fas fa-edit'></i>
+            <span>เพิ่มข้อมูล/แก้ไขข้อมูล</span></a>
+        </li>
+        <hr class="sidebar-divider">
+        
+      </li>
+  
+    </ul>
+    <!-- Sidebar -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <!-- TopBar -->
+        <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+          <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                
+              </a>
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
+                <form class="navbar-search">
+                  <div class="input-group">
+                    <input type="text" class="form-control bg-light border-1 small" placeholder="What do you want to look for?"
+                      aria-label="Search" aria-describedby="basic-addon2" style="border-color: #3f51b5;">
+                    <div class="input-group-append">
+                      
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </li>
+            
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <li class="nav-item dropdown no-arrow">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <span class="ml-2 d-none d-lg-inline text-white small"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="{%  url 'admin:login' %}">
+                  <i class="fas fa-sign-in-alt"></i></i>
+                  เข้าสู่ระบบ
+                </a>
+                <div class="dropdown-divider"></div>
+                
+                <a class="dropdown-item" href="{%  url 'admin:logout' %}">
+                  <i class="fas fa-sign-out-alt"></i></i>
+                  ออกจากระบบ
+                </a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <!-- Topbar -->
+
+        <!-- Container Fluid-->
+        <div class="container-fluid" id="container-wrapper">
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">{% block title %}{% endblock %}</h1>
+          </div>
+          
+          {% block content %}{% endblock %}
+         
+
+        </div>
+        <!---Container Fluid-->
+      </div>
+      <!-- Footer -->
+     
+      <!-- Footer -->
+    </div>
+  </div>
+
+  <!-- Scroll to top -->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+  <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+  <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js'%}"></script>
+  <script src="{% static 'js/ruang-admin.min.js'%}"></script>
+  <script src="{% static 'vendor/chart.js/Chart.min.js'%}"></script>
+  <script src="{% static 'js/demo/chart-area-demo.js'%}"></script>  
+</body>
+
+</html>

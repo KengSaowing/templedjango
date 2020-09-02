@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>Google Maps Multiple Markers</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPr8A6Vo8Yjw2q1XCeD8wugso11614GKk&callback=initMap">
+  </script>
+</head>
+
+<body onload="getLocation()">
+  <div id="map" style="width: 98%; height: 450px;"></div>
+  
+  <script type="text/javascript">
+  
+    var locations = [
+    {% for location in locations %} 
+    {{location|safe}}, 
+    {% endfor %}
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(15.102055, 104.315271),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+ 
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function (marker, i) {
+        return function () {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+    
+  </script>
+
+</body>
+
+</html>
+
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+{% comment %} <div>
+  <button onclick="getLocation()">จับพิกัด</button>
+</div> {% endcomment %}
+<br>
+
+<form method="post" action="/multiplepoint_route">
+    {% csrf_token %}  
+    <input type="hidden" name="latitude" id="latitude" value="">
+    <input type="hidden" name="longitude" id="longitude" value="">
+    <input type="text" name="temple_id" value="{{temples_id}}">
+    <input type="submit" value="วางแผนการเดินทาง" class="btn btn-outline-success btn-lg btn-block">
+</form>
+  
+    <script>
+      var lat = document.getElementById("latitude");
+      var long = document.getElementById("longitude");
+
+      function getLocation() {
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition);
+          } else { 
+              x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+      }
+
+      function showPosition(position) {
+          lat.value = position.coords.latitude;
+          long.value = position.coords.longitude;
+      }
+  </script>
+<br>
+
+<div class="mb-4"></div>
+  
+<div class="card-columns">
+  {% for temple_obj in temples %}
+  <div class="card mb-4">
+    <img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{temple_obj.name}}</h5>
+
+      {% for cat in temple_obj.Category.all %}
+        <span class="card-text">{{cat.name}}</span>
+      {% endfor %}
+      <div>
+<form method="post" action="{% url 'templeone' temple_obj.id %}">
+    {% csrf_token %}  
+    <input type="hidden" name="latitude" id="latitude" value="">
+    <input type="hidden" name="longitude" id="longitude" value="">
+    <input type="submit" value="เพิ่มเติม" class="btn btn-primary">
+</form>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+  .card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+</style>
+{% endblock %}

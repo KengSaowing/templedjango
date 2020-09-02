@@ -1,0 +1,2890 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "Enroll",
+        "model": "category"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "Enroll",
+        "model": "temple"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "8wv8ecdjio5fzra7jn85vg5igd64njs8",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyEu2IV69N5vILuwSNXQpLQn47_bJj3oHOe9mbcKtC4lrE3mMCZ1VaBOvx1TfErdQXpQvU86TnWZR9a7og_a9DAled0O9--gUCvbmvnM1IkhxggdgQEnPWaTLfaAVqL3Pgl467IHh4YtOcyRzBaGC6nPF-ypN8M:1k5Q9k:9we6c0guf1V8eib9lwIw4IbT4hziRVuKwlgs21IRJwI",
+        "expire_date": "2020-08-25T09:01:16.913Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "babki2uyq8ysh9f2zghbls7ti1jyr3qb",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyEu2IV69N5vILuwSNXQpLQn47_bJj3oHOe9mbcKtC4lrE3mMCZ1VaBOvx1TfErdQXpQvU86TnWZR9a7og_a9DAled0O9--gUCvbmvnM1IkhxggdgQEnPWaTLfaAVqL3Pgl467IHh4YtOcyRzBaGC6nPF-ypN8M:1k6F4f:uSZaUA9VQrfcWV6toq8hEarDgJz7B6P9HcAS_3bj0iA",
+        "expire_date": "2020-08-27T15:23:25.936Z"
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "lw0xqjijqga0y9gudodg89mnfvdaw8n9",
+    "fields": {
+        "session_data": ".eJxVjMEOwiAQRP-FsyEu2IV69N5vILuwSNXQpLQn47_bJj3oHOe9mbcKtC4lrE3mMCZ1VaBOvx1TfErdQXpQvU86TnWZR9a7og_a9DAled0O9--gUCvbmvnM1IkhxggdgQEnPWaTLfaAVqL3Pgl467IHh4YtOcyRzBaGC6nPF-ypN8M:1k5QBk:8yMjSG5K7XmjAE5TACsm0dJJ16swS7dLmHTH3UtS9Ag",
+        "expire_date": "2020-08-25T09:03:20.852Z"
+    }
+},
+{
+    "model": "Enroll.category",
+    "pk": 2,
+    "fields": {
+        "id_category": "2",
+        "name": "เสริมสิริมงคล"
+    }
+},
+{
+    "model": "Enroll.category",
+    "pk": 3,
+    "fields": {
+        "id_category": "3",
+        "name": "ไหว้พระที่ศักดิ์สิทธิ์"
+    }
+},
+{
+    "model": "Enroll.category",
+    "pk": 4,
+    "fields": {
+        "id_category": "4",
+        "name": "สถานที่ศักดิ์สิทธิ์"
+    }
+},
+{
+    "model": "Enroll.category",
+    "pk": 5,
+    "fields": {
+        "id_category": "5",
+        "name": "ศูนย์ปฏิบัติธรรม"
+    }
+},
+{
+    "model": "Enroll.category",
+    "pk": 6,
+    "fields": {
+        "id_category": "6",
+        "name": "ทำบุญปล่อยนก ปล่อยปลา"
+    }
+},
+{
+    "model": "Enroll.category",
+    "pk": 7,
+    "fields": {
+        "id_category": "7",
+        "name": "เช่าวัตถุมงคลเพื่อบูชา"
+    }
+},
+{
+    "model": "Enroll.category",
+    "pk": 8,
+    "fields": {
+        "id_category": "8",
+        "name": "พระเกจิชื่อดัง"
+    }
+},
+{
+    "model": "Enroll.category",
+    "pk": 9,
+    "fields": {
+        "id_category": "9",
+        "name": "วัดมีชื่อเสียง"
+    }
+},
+{
+    "model": "Enroll.category",
+    "pk": 10,
+    "fields": {
+        "id_category": "10",
+        "name": "สถาปัตยกรรม"
+    }
+},
+{
+    "model": "Enroll.category",
+    "pk": 11,
+    "fields": {
+        "id_category": "10",
+        "name": "เสี่ยงเซียมซี"
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 1,
+    "fields": {
+        "id_temple": "1",
+        "name": "วัดพระธาตุสุพรรณหงส์",
+        "Monk": "หลวงปู่ทวด",
+        "Details": "ดพระธาตุสุพรรณหงส์ บ้านหว้าน ต.น้ำคำ อ.เมือง จ.ศรีสะเกษ เป็นวัดที่น่าสนใจตรงที่มีการสร้างอุโบสถเป็นรูปเรือสุพรรณหงส์ ประดิษฐานกลางสระน้ำ ตัวพระอุโบสถกว้าง 5 เมตร ยาว 13.60 เมตร หลังคาทรงจัตุรมุข 3 ชั้น มียอดมณฑปกลางอุโบสถ เพื่อบรรจุพระบรมสารีริกธาตุ และด้",
+        "latitude": "15.1942006",
+        "Longitude": "104.2940086",
+        "image": "image/upload/v1597160789/majmxwaoyu3n2nsjqahf.jpg",
+        "Category": [
+            3,
+            9,
+            6,
+            10
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 2,
+    "fields": {
+        "id_temple": "2",
+        "name": "วัดมหาพุทธาราม (วัดพระโต)",
+        "Monk": "หลวงพ่อโต",
+        "Details": "วัดมหาพุทธาราม บ้านเมืองเหนือ อำเภอเมืองศรีสะเกษ จังหวัดศรีสะเกษ ตั้งอยู่กลางเมืองศรีสะเกษมีวิหารซึ่งเป็นที่ประดิษฐานพระพุทธรูปคู่บ้านคู่เมืองและเป็นที่เคารพสักการะของชาวศรีสะเกษคือ หลวงพ่อโต เป็นพระพุทธรูปองค์ใหญ่ปางมารวิชัยเดิมเป็นพระพุทธรูปศิลาจำหลัก ส",
+        "latitude": "15.1177025",
+        "Longitude": "104.326558",
+        "image": "image/upload/v1597161084/ihyxcyqorguxv72e8ybz.jpg",
+        "Category": [
+            3,
+            8,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 3,
+    "fields": {
+        "id_temple": "3",
+        "name": "วัดป่าศรีมงคลรัตนาราม",
+        "Monk": "พระครูวิจิตรวินัยคุณ",
+        "Details": "วัดป่าศรีมงคลรัตนาราม ตั้งอยู่ที่ บ้านสิม หมู่ 8  ตำบลโคกจาน อำเภออุทุมพรพิสัย จังหวัดศรีสะเกษ ก่อตั้งขึ้นเมื่อปี พ.ศ. 2536 โดยการบริจาคที่ดิน ของนายหวย เพ็งพันธ์ และนางสมัยเพ็งพันธ์ ซึ่งเป็นโยมบิดา-มารดา ของพระครูวิจิตรวินัยคุณ เจ้าอาวาสวัดป่าศรีมงคลรัตน",
+        "latitude": "14.9673859",
+        "Longitude": "104.1044229",
+        "image": "image/upload/v1597164663/ndrsa7u97638wzhte9vr.jpg",
+        "Category": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 4,
+    "fields": {
+        "id_temple": "4",
+        "name": "วัดเจียงอีศรีมงคลวราราม",
+        "Monk": "พระราชกิตติรังษี (บุญทัน สนฺตจิตฺโต",
+        "Details": "ในอดีตและปัจจุบันเรียกว่า “วัดเจียงอีศรีมงคลวราราม” เป็นอารามราษฎร์ ชนิดได้รับพระราชทานวิสุงคามสีมาแล้ว โดยกว้าง 40 เมตร ยาว 80 เมตร สงฆ์ทำการผูกเป็นสีมาแล้ว ตั้งอยู่กลางเมืองศรีสะเกษ อยู่ในคุ้มบ้านเจียงอี ตำบลเมืองใต้ (สมัยก่อนเรียกตำบลเมืองเก่า) อำเภอเม",
+        "latitude": "15.1083694",
+        "Longitude": "104.3299109",
+        "image": "image/upload/v1597164791/rxnucxeiyzosjjb1u4ay.jpg",
+        "Category": [
+            3,
+            8,
+            7
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 5,
+    "fields": {
+        "id_temple": "5",
+        "name": "วัดหนองตะเคียน",
+        "Monk": "รอข้อมูล",
+        "Details": "วัดหนองตะเคียน ตั้งอยู่หมู่บ้านหนองตะเคียน หมูที่ 9 ตำบลจาน อำเภอเมือง จังหวัดศรีสะเกษ ห่างจากอำเภอเมือง 17 กิโลเมตร ไปตามถนนศรีสะเกษ-กันทรลักษ์ แยกเลี้ยวซ้ายบริเวณบ้านหนองคูน้อย",
+        "latitude": "14.9859756",
+        "Longitude": "104.4155002",
+        "image": "image/upload/v1597164920/fs6ypiwlztaluk8eu1g5.jpg",
+        "Category": [
+            5,
+            10,
+            4
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 6,
+    "fields": {
+        "id_temple": "6",
+        "name": "วัดบ้านง้อ",
+        "Monk": "รอข้อมูล",
+        "Details": "หมู่ 2, ต.นํ้าคํา อ.เมืองศรีสะเกษ จ.ศรีสะเกษ, 33000",
+        "latitude": "15.1364658",
+        "Longitude": "104.349977",
+        "image": "image/upload/v1597165004/w3fmi2o312aokpmxpf9x.jpg",
+        "Category": [
+            9,
+            7,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 7,
+    "fields": {
+        "id_temple": "7",
+        "name": "วัดป่าศรีสำราญ",
+        "Monk": "พระวินัยเมธี (สุพิสิทธิ์ คมนสิทฺโธ ป.ธ.๕)",
+        "Details": "สะอาด สงบ ตั้งอยู่ในตัวเมืองศรีสะเกษ สามารถเข้าได้ 2 ทาง จาก ถ.กสิกรรม คือ ทางเข้าใกล้หอนาฬิกา และ ทางเข้าฝั่งตรงข้าม วิทยาลัยเทคนิคศรีสะเกษ ในวัด มีพระพุทธรูปศักดิ์สิทธิ์  และ จุดทางลงห้วยสำราญ",
+        "latitude": "15.1133953",
+        "Longitude": "104.3155391",
+        "image": "image/upload/v1597165085/csg8o26yllzkymvrat97.jpg",
+        "Category": [
+            8,
+            7
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 8,
+    "fields": {
+        "id_temple": "8",
+        "name": "วัดโนนแย้",
+        "Monk": "รอข้อมูล",
+        "Details": "ต. หญ้าปล้อง อ.เมืองศรีสะเกษ จ.ศรีสะเกษ 33000",
+        "latitude": "15.1353849",
+        "Longitude": "104.2930046",
+        "image": "image/upload/v1597165236/uxuotrngydrgoy19ze1y.jpg",
+        "Category": [
+            3,
+            7,
+            5
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 9,
+    "fields": {
+        "id_temple": "9",
+        "name": "วัดป่ามหาเจดีย์แก้ว (วัดล้านขวด)",
+        "Monk": "รอข้อมูล",
+        "Details": "วัดป่ามหาเจดีย์แก้วแท้จริงวัดที่รกร้างว่างเปล่าของเจดีย์แก้วขนาดใหญ่ ) ยังเป็นที่รู้จักกันในชื่อวัดล้านขวดเป็นพุทธ วิหารในขุนหาญอำเภอ ของศรีสะเกษจังหวัดประเทศไทย เป็นวัดที่สร้างขึ้นมามากกว่า 1.5 ล้านว่างไฮเนเก้นขวดและช้าง เบียร์ ขวด การสะสมของขวดเริ่มในปี",
+        "latitude": "14.618459",
+        "Longitude": "104.417119",
+        "image": "image/upload/v1597165315/bqq4uao2cj3j8umtujzr.jpg",
+        "Category": [
+            3,
+            9,
+            10,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 10,
+    "fields": {
+        "id_temple": "10",
+        "name": "วัดพานทา",
+        "Monk": "รอข้อมูล",
+        "Details": "ถนน โยธาธิการ ศรีสะเกษ 3019 เมือง อำเภอเมืองศรีสะเกษ ศรีสะเกษ 33000",
+        "latitude": "15.117007",
+        "Longitude": "104.3449573",
+        "image": "image/upload/v1597165395/dsusotziqcnqpikiyqre.jpg",
+        "Category": [
+            7,
+            5
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 11,
+    "fields": {
+        "id_temple": "11",
+        "name": "วัดโนนแค",
+        "Monk": "รอข้อมูล",
+        "Details": "\"วัดบ้านโนนแค\" ผมย้ายมาจากบริเวณ อบต.โพนเขวา (เพราะแถวนั้นมีแต่ บ้านเหล่าแค ไม่มีบ้านโนนแค) ..จากนั้นก็ทดลองเปลี่ยนชื่อเป็น \"วัดโนนแค\" และใส่ที่อยู่หมู่ 2 (บ้านอีลอก) ครับผม ชื่อ \"โนนแค\" เป็นชื่อเก่าแก่โบราญ ที่ชาวบ้านเรียกกันมา ครับผม (และตอนนี้ก็มีป้ายบ",
+        "latitude": "15.109312",
+        "Longitude": "104.3802337",
+        "image": "image/upload/v1597228138/dkbgo3uyp3i6cquilcxz.jpg",
+        "Category": [
+            7,
+            5
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 12,
+    "fields": {
+        "id_temple": "12",
+        "name": "วัดทุ่งสว่าง",
+        "Monk": "รอข้อมูล",
+        "Details": "มีองศ์ประถมใหญ่พระพุทธเมตตาองค์ทองมองเห็นเด่นชัด",
+        "latitude": "15.1517347",
+        "Longitude": "104.2070297",
+        "image": "image/upload/v1597228237/zh8kex9amhx7phtcgkyv.jpg",
+        "Category": [
+            3,
+            7,
+            6
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 13,
+    "fields": {
+        "id_temple": "13",
+        "name": "วัดเทพปราสาท สระกำแพงน้อย",
+        "Monk": "รอข้อมูล",
+        "Details": "เป็นวัดเก่าแก่ มีพระพุทธรูปและสระน้ำศักดิ์สิทธิ์ที่ศรัทธาในเรื่องการรักษาโรค บริเวณรอบ ๆร่มรื่น เงียบสงบ",
+        "latitude": "15.1462716",
+        "Longitude": "104.2449975",
+        "image": "image/upload/v1597228323/caox4x6num7m61hjxni5.jpg",
+        "Category": [
+            9,
+            5,
+            10,
+            4
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 14,
+    "fields": {
+        "id_temple": "14",
+        "name": "วัดเพียนาม",
+        "Monk": "รอข้อมูล",
+        "Details": "เป็นวัดเก่าแก่ ที่เหมาะกับการทำบุญ",
+        "latitude": "15.1315008",
+        "Longitude": "104.270514",
+        "image": "image/upload/v1597228399/ozt5ckmihtu6ri4uplnz.jpg",
+        "Category": [
+            3,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 15,
+    "fields": {
+        "id_temple": "15",
+        "name": "วัดศรีมิ่งเมือง",
+        "Monk": "รอข้อมูล",
+        "Details": "วัดสะอาด เงียบ สงบ ร่มรื่น ต้นไม้ใหญ่เยอะ มีท่าน้ำให้ลงไปให้อาหารปลาด้วย",
+        "latitude": "15.1296319",
+        "Longitude": "104.3333965",
+        "image": "image/upload/v1597228485/vfoffcuqrgr4txritzi8.jpg",
+        "Category": [
+            3,
+            7,
+            10
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 16,
+    "fields": {
+        "id_temple": "16",
+        "name": "วัดเฉลิมกาญจนา (วัดโนนกอง)",
+        "Monk": "รอข้อมูล",
+        "Details": "วัดเฉลิมกาญจนาราม (โนนกอง) :  หมู่ 6 (บ้านโนนกอง) ต.โพธิ์ อ.เมือง จ.ศรีสะเกษ 33000 รูปประกอบ 7 รูป ผมถ่ายเมือ วันที่ ‎27 ‎August 2016/2559 ‏‎เวลา 13:42 - 13:49  ครับ (ลงรูป วันที่ 2 ก.ค. 2560) ชื่อ \"วัดเฉลิมกาญจนาราม (โนนกอง)\" ผมตั้งไว้โดยใช้อีเมลอีกอัน (",
+        "latitude": "15.113269",
+        "Longitude": "104.3683353",
+        "image": "image/upload/v1597228564/bibqx9whzscszhly4qic.jpg",
+        "Category": [
+            6,
+            5,
+            10,
+            4
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 17,
+    "fields": {
+        "id_temple": "17",
+        "name": "วัดพระธาตุเรืองรอง",
+        "Monk": "รอข้อมูล",
+        "Details": "\"เราหลายคนมักมีความเชื่อผิดๆกันว่า เมื่อเรามีความไม่สบายใจ ความทุกข์ หรือความหวังที่จะมี จะได้สิ่งใด เราก็มักจะไปวัดเพื่อให้คลายความทุกข์ หรือขอให้สมหวังในสิ่งที่เราต้องการ ความเป็นจริงแล้วนั้น ทุกข์ที่เรามี หรือความปรารถนาในสิ่งที่เราต้องการ ล้วนเกิดจากใ",
+        "latitude": "15.1662899",
+        "Longitude": "104.2966127",
+        "image": "image/upload/v1597228728/adfckrddigekkhzgc5iz.jpg",
+        "Category": [
+            3,
+            9,
+            10,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 18,
+    "fields": {
+        "id_temple": "18",
+        "name": "วัดบ้านกุดโง้ง",
+        "Monk": "หลวงปู่ศรี ฐิตธัมโม",
+        "Details": "เป็นทีประติบัตธรรมทีดีมากครับสงบร่มเย็นดี",
+        "latitude": "15.0632141",
+        "Longitude": "104.3497325",
+        "image": "image/upload/v1597228847/kdo0enmphb9kypflelfr.jpg",
+        "Category": [
+            8,
+            7,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 19,
+    "fields": {
+        "id_temple": "19",
+        "name": "วัดหลวงสุมังคลาราม",
+        "Monk": "รอข้อมูล",
+        "Details": "เดิมชื่อ \" วัดศรีสุมังค์ \" พระยาวิเศษภักดีศรีนครลำดวน (ชม) เจ้าเมืองศรีสะเกษ เป็นผู้ให้สร้างขึ้น ประมาณ พ.ศ.๒๓๒๘ เพื่อเป็นอนุสรณ์ที่บิดา คือ พระยารัตนวงศา (อุ่น) ขอแยกจากเมืองขุขันธ์ มาตั้งจังหวัดศรีสะเกษ",
+        "latitude": "15.1129764",
+        "Longitude": "104.3320329",
+        "image": "image/upload/v1597228928/wtbcp5agcs2enzy5sskm.jpg",
+        "Category": [
+            9,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 20,
+    "fields": {
+        "id_temple": "20",
+        "name": "วัดคูเมือง",
+        "Monk": "รอข้อมูล",
+        "Details": "ชุมชนโดยรอบ5-6ชุมชนมาทำบุญที่วัดนี้และสร้างคน ให้โอกาศพระเณรได้อาศัย",
+        "latitude": "15.0930255",
+        "Longitude": "104.319868",
+        "image": "image/upload/v1597229002/i661ettlv19f8ek6aapn.jpg",
+        "Category": [
+            7,
+            5,
+            4
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 21,
+    "fields": {
+        "id_temple": "21",
+        "name": "วัดโพนข่า",
+        "Monk": "รอข้อมูล",
+        "Details": "ตำบล โพนข่า อำเภอเมืองศรีสะเกษ ศรีสะเกษ 33000",
+        "latitude": "15.0546956",
+        "Longitude": "104.3742316",
+        "image": "image/upload/v1597229098/irnpe2rvinnw6tngp8nz.jpg",
+        "Category": [
+            6,
+            5
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 22,
+    "fields": {
+        "id_temple": "22",
+        "name": "วัดบ้านโพนเขวา",
+        "Monk": "รอข้อมูล",
+        "Details": "ร่มรืนรมเย็น.สงบดีและมีตลาดนัดด้วย",
+        "latitude": "15.1160237",
+        "Longitude": "104.4304092",
+        "image": "image/upload/v1597229208/tvvg9tpi8ii4as9rmuvb.jpg",
+        "Category": [
+            7,
+            6,
+            5
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 23,
+    "fields": {
+        "id_temple": "23",
+        "name": "วัดโนนผึ้ง",
+        "Monk": "รอข้อมูล",
+        "Details": "มีพระพุทธรูปขนาดใหญ่ สร้างเมื่อพุทธศักราช 2555 น่ากราบไหว้สักการะขอพร ท่านไดที่มากราบไหว้ ขอให้พระคุ้มครองจะเดินทางไปที่ใดขอให้ปลอดภัย ขอให้มีความสุข ร่ำรวย ร่ำรวยหปรับทุกข์ โศก โรคภัยทุกประการด้วยเทริญ สาธุ",
+        "latitude": "15.1036731",
+        "Longitude": "104.619918",
+        "image": "image/upload/v1597229264/blmi8azzv3cuenzjhsuv.jpg",
+        "Category": [
+            3,
+            8,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 24,
+    "fields": {
+        "id_temple": "24",
+        "name": "วัดศรีบึงบูรพ์",
+        "Monk": "รอข้อมูล",
+        "Details": "วัดศรีบึงบูรพ์เป็นวัดที่ติดลำน้ำมูลมีพระอุโบสถสวยงามเข้มขลังยิ่งใหญ่สวยงามมากๆ พญานาคเจ็ดเศียรสวยงามมากๆ ถือเป็นวัดหนึ่งที่สวยงามเชิดหน้าชูตาให้พุทธศาสนิกชนได้แวะเข้ามาไหว้พระทำบุญ กราบพระขอพร พระอุโบสถที่วัดแห่งนี้จะไม่มีหน้าต่างจะสร้างเป็นผนังปิดทึบเหมื",
+        "latitude": "15.3413697",
+        "Longitude": "104.0532295",
+        "image": "image/upload/v1597229316/pt9iv9qfos6qdpy5zz8q.jpg",
+        "Category": [
+            6,
+            5,
+            10
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 25,
+    "fields": {
+        "id_temple": "25",
+        "name": "วัดส้มป่อยใหญ่",
+        "Monk": "รอข้อมูล",
+        "Details": "วัดส้มป่อยใหญ่เป็นวัดที่น่าเข้าไปเยี่ยมชมทำบุญเป็นที่ยึดเนี่ยวทางใจของคนตำบลส้มป่อยสถานที่วัดตั้งยู่ติดริมแม่น้ำมูลอากาศถ่ายเทสดวกเย็นน่าผอ่นคลายถนนผ่านหน้าวัดสันจรไปมาสดวกคนในชุมชนมีจิดใจโอบออ้มอารีมีน้ำใจ",
+        "latitude": "15.2704404",
+        "Longitude": "104.2406788",
+        "image": "image/upload/v1597229374/nkpefgo6c177c89n5bug.jpg",
+        "Category": [
+            7,
+            6,
+            5,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 26,
+    "fields": {
+        "id_temple": "26",
+        "name": "วัดเขียนบูรพาราม",
+        "Monk": "รอข้อมูล",
+        "Details": "\"สิ่งศักดิ์สิทธิ์คู่เมืองขุขันธ์ศูนย์รวมจิตใจให้คนขุขันธ์อยู่เย็นเป็นสุข\"",
+        "latitude": "14.7161601",
+        "Longitude": "104.2034383",
+        "image": "image/upload/v1597229446/drzdtxu28xh7vmh2wtga.jpg",
+        "Category": [
+            7,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 27,
+    "fields": {
+        "id_temple": "27",
+        "name": "วัดยางกุด",
+        "Monk": "รอข้อมูล",
+        "Details": "ร่มรืนรมเย็น.สงบดี",
+        "latitude": "15.0465438",
+        "Longitude": "104.2312753",
+        "image": "image/upload/v1597229507/bainvq190epnenyadkop.jpg",
+        "Category": [
+            7,
+            6,
+            5
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 28,
+    "fields": {
+        "id_temple": "28",
+        "name": "วัดเบญจพุทธาราม",
+        "Monk": "รอข้อมูล",
+        "Details": "สถานที่ เหมาะแก่การมาปฏิบัติธรรม ศาสนาสถานอื่นๆ ล้วนมีตำนานน่าศึกษา เช่น พระธาตุ พระพุทธรูป ที่เก่าแก่ ทรงคุณค่า ท่านเจ้าอาวาส นำญาติธรรม สู่การปฏิบัติยอดเยี่ยม รับกิจนิมนต์ทุกสถานที่",
+        "latitude": "15.1679039",
+        "Longitude": "104.325048",
+        "image": "image/upload/v1597229574/dmuo2ymyvxpaxru93e2n.jpg",
+        "Category": [
+            3,
+            5,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 29,
+    "fields": {
+        "id_temple": "29",
+        "name": "วัดก้านเหลือง",
+        "Monk": "รอข้อมูล",
+        "Details": "วัดที่นี่สวยค่ะ มีองค์หลวงพ่อใหญ่ที่เก่าแก่ อายุหลายร้อยปีเป็นพระคู่วัดที่ศักดิ์สิทธิ์มากใครเดือดร้อนมากราบสักการะ ขอพรจะสมปรารถนา",
+        "latitude": "15.2787545",
+        "Longitude": "104.8519016",
+        "image": "image/upload/v1597229670/mx6f6sbjqkgqor9ipjyw.jpg",
+        "Category": [
+            3,
+            5,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 30,
+    "fields": {
+        "id_temple": "30",
+        "name": "พระธาตุวัดไพรบึง",
+        "Monk": "รอข้อมูล",
+        "Details": "พื้นที่ภายในวัดไม่กว้างขวางนักขยายพื้นที่ออกไปไม่ได้เพราะอยู่ติดแหล่งที่อยู่ชุมชน พื้นที่ภายในวัดมีทั้งโรงเรียนและร้านค้าชุมชน มีอาคารอายุเก่าแก่ภายในวัดสวยงามที่ทางวัดดูแลรักษาเอาไว้แม้จะไม่ได้ใช้งานแล้ว(อายุสร้างเมื่อปี2475)",
+        "latitude": "14.7573107",
+        "Longitude": "104.3596753",
+        "image": "image/upload/v1597229796/h3petteeo1hc8a2pawct.jpg",
+        "Category": [
+            3,
+            10,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 31,
+    "fields": {
+        "id_temple": "31",
+        "name": "วัดโสภณวิหาร (บ้านกันทรารมย์)",
+        "Monk": "รอข้อมูล",
+        "Details": "อุโบสถเก่าแก่โบราณ พระพุทธรูปศิลปะลานช้าง ชุมชนมีหลักเมืองเก่า ด่านตรวจสัตว์ผ่านแดนในอดีต",
+        "latitude": "14.7197592",
+        "Longitude": "104.0798132",
+        "image": "image/upload/v1597229940/ihnpcvihvjxfhcdz4lx0.jpg",
+        "Category": [
+            6,
+            5,
+            10,
+            4
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 32,
+    "fields": {
+        "id_temple": "32",
+        "name": "วัดสิเรียมพุทธาราม",
+        "Monk": "รอข้อมูล",
+        "Details": "วัดสิเรียมพุทธารามเดิมชื่อวัดบ้านสังกัน เป็นวัดเล็กๆ แต่เมื่อได้รับกฐินพระราชทานโดยคุณสิเรียมนำกฐินพระราชทานมา วัดแห่งนี้จึงได้รับการพัฒนาให้สวยงามสง่า",
+        "latitude": "14.720844",
+        "Longitude": "104.3255657",
+        "image": "image/upload/v1597230005/lu9ernbw7zgdconawqc5.jpg",
+        "Category": [
+            3,
+            7,
+            4
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 33,
+    "fields": {
+        "id_temple": "33",
+        "name": "วัดกระโพธิ์ช่างหม้อ",
+        "Monk": "รอข้อมูล",
+        "Details": "ที่วัดกำลังสร้างศาลาการเปรียญ ยังขาดปัจจัยอีกมาก สามารถสร่วมบุญได้ตามเบอร์ในภาพนี้ได้เลยครับ สาธุ วัดนี้เป็นวัดไม่ใหญ่มาก มีที่จอดรถสบาย รถบัสสองชั้นสามารถเข้ามาได้",
+        "latitude": "14.7838378",
+        "Longitude": "104.195392",
+        "image": "image/upload/v1597230088/zwrvw82vpbn5lsvsma17.jpg",
+        "Category": [
+            5,
+            10,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 34,
+    "fields": {
+        "id_temple": "34",
+        "name": "วัดหนองหว้า",
+        "Monk": "รอข้อมูล",
+        "Details": "วัดบ้านหนองหว้า เป็นสถานที่ประกอบพิธีกรรมทางศาสนาของบ้านหนองหว้า",
+        "latitude": "15.0095021",
+        "Longitude": "104.3027091",
+        "image": "image/upload/v1597230215/wvncr7qkc4bx2aevpjsk.jpg",
+        "Category": [
+            3,
+            7,
+            5,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 35,
+    "fields": {
+        "id_temple": "35",
+        "name": "วัดบ้านเมืองจันทร์",
+        "Monk": "รอข้อมูล",
+        "Details": "วัดเมืองจันทร์ มีพระธาตุเมืองจันทร์เป็นโบราณสถานคู่บ้านคู่เมืองของ อำเภอเมืองจันทร์ เป็นที่เคารพของชุมชน",
+        "latitude": "15.1568179",
+        "Longitude": "104.0266516",
+        "image": "image/upload/v1597230390/qpenyoqpvfkkkiitul5d.jpg",
+        "Category": [
+            3,
+            10,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 36,
+    "fields": {
+        "id_temple": "36",
+        "name": "วัดนาครินทร์",
+        "Monk": "รอข้อมูล",
+        "Details": "เป็นวัดที่บริหารจัดการได้ดี โดยเฉพาะโครงการสวดมนต์โต้รุ่งทุกวันพระ ถือว่าโดดเด่นและทำได้ดี นอกจากนั้นยังมีความเจริญที่สัมผัสได้โดยเฉพาะวิทยุชุมชนะและเว็บไซต์ที่เข้าเยี่ยมชมได้ตลอด พร้อมด้วยหน้าเพจของวัดที่มีคำคมให้ติดตามอ่านได้ตลอด",
+        "latitude": "14.917794",
+        "Longitude": "104.0197614",
+        "image": "image/upload/v1597230627/hjryfweuesj1835o1eoq.jpg",
+        "Category": [
+            3,
+            7,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 37,
+    "fields": {
+        "id_temple": "37",
+        "name": "วัดศรีขุนหาญ",
+        "Monk": "รอข้อมูล",
+        "Details": "พื้นที่กว้างขวาง สะอาด สงบ ร่มรื่น",
+        "latitude": "14.6202575",
+        "Longitude": "104.4239577",
+        "image": "image/upload/v1597230696/rzmmeqe0txlu7my1bxkq.jpg",
+        "Category": [
+            7,
+            6,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 38,
+    "fields": {
+        "id_temple": "38",
+        "name": "วัดโพธิพฤกษ์ (วัดเจ๊ก)",
+        "Monk": "รอข้อมูล",
+        "Details": "โบราณสถานก่อด้วยอิฐ ปัจจุบันอยู่ในสภาพพังทลาย กลายเป็นเนินโบราณสถาน มีลักษณะเป็นอาคารรูปสี่เหลี่ยมจัตุรัสบนเนินดินใหญ่ ผนังแต่ละด้านจะก่ออิฐเป็นช่องคล้ายประตู โดยก่ออิฐทึบทั้งหมด มีความสูงประมาณ 15 เมตร ส่วนยอดหักพังลงมาจนถึงเรือนธาตุ โบราณสถานแห่งนี้คงสร",
+        "latitude": "14.7216259",
+        "Longitude": "104.1955799",
+        "image": "image/upload/v1597230771/rn1ty8yohphtvcsq1qlh.jpg",
+        "Category": [
+            4,
+            5,
+            6,
+            7,
+            9,
+            10
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 39,
+    "fields": {
+        "id_temple": "39",
+        "name": "วัดนามวิจิตร์ตะเคียนราม",
+        "Monk": "รอข้อมูล",
+        "Details": "มีเสมาหิน หินบัลลังก์และหินจารึกสี่เหลี่ยมโบราณ เป็นแหล่งศิลปกรรมท้องถิ่นอันควรอนุรักษ์",
+        "latitude": "14.5954938",
+        "Longitude": "104.1833586",
+        "image": "image/upload/v1597230862/b7mhiwzgmtlr21jiooqy.jpg",
+        "Category": [
+            7,
+            5,
+            4
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 40,
+    "fields": {
+        "id_temple": "40",
+        "name": "วัดบ้านจาน หลวงปู่หมุน ฐิตสีโล",
+        "Monk": "หลวงปู่หมุน ฐิตสีโล",
+        "Details": "วัดที่ได้รับความศรัทธา จากพุทธศาสนิกชนอย่างมาก ในดินแดนอิสานใต้ แผ่นดินศรีสะเกษ หลวงปู่หมุนผู้มากล้นด้วยบุญบารมี สรีระสังขารของท่านยังเป็นหมุดหมายของบรรดาศิษยานุศิษย์ที่เลื่อมใส อยากมากราบไหว้สักการะอย่างมิเสื่อมคลาย",
+        "latitude": "15.0074326",
+        "Longitude": "104.4967734",
+        "image": "image/upload/v1597230981/k2mvxvbekhy1kqz6x42c.jpg",
+        "Category": [
+            3,
+            8,
+            5,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 41,
+    "fields": {
+        "id_temple": "41",
+        "name": "วัดบ้านผักขะ",
+        "Monk": "หลวงตาครึ่ม",
+        "Details": "วัดนี้เป็นวัดที่สวยงามมาก",
+        "latitude": "15.1759606",
+        "Longitude": "104.3921654",
+        "image": "image/upload/v1597231100/cumssxlvs7cdprzcuwqb.jpg",
+        "Category": [
+            7,
+            6
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 42,
+    "fields": {
+        "id_temple": "42",
+        "name": "วัดไพรพัฒนา",
+        "Monk": "รอข้อมูล",
+        "Details": "เป็นวัดเพื่อการท่องเที่ยวโดยแท้ วัดสวยสไตล์ขอม เป็นแบบมณฑป ยอดปรางค์ 9 ชั้น หน้าบัน 4 ทิศ ประดิษฐานสังขารไม่เน่าเปื่อยอยู่ในโลงแก้วให้สักกานะ เป็นสถานที่คนนิยมมาเมื่อมาจ.ศรีสะเกษ มีการจัดการสถานที่อย่างเป็นระบบ มีคน(อาสาสมัคร)บริการตั้งแต่ข้ามถนนเข้าวัด",
+        "latitude": "14.4660549",
+        "Longitude": "104.0693206",
+        "image": "image/upload/v1597231190/elsf7y1wrpkbdjyitan6.jpg",
+        "Category": [
+            7,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 43,
+    "fields": {
+        "id_temple": "43",
+        "name": "วัดโพธิ์ทองวนาราม",
+        "Monk": "รอข้อมูล",
+        "Details": "งานปฏิบัติธรรม 6-17 กุมภาพันธ์ ทุกปี สถานที่วัดต้นไม้เยอะมาก เป็นวัดหนึ่งในอำเภอภูสิงห์ที่อนุรักษ์ต้นไม้ โดยเฉพาะบริเวณหลังเป็นป่าดิบ อุดมสมบูรณ์ เหมาะแก่การทำความภาวนามาก",
+        "latitude": "14.546708",
+        "Longitude": "104.0886479",
+        "image": "image/upload/v1597231243/g4binpxux4vquy9fl17n.jpg",
+        "Category": [
+            7,
+            4,
+            2
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 44,
+    "fields": {
+        "id_temple": "44",
+        "name": "วัดบึงหมอก",
+        "Monk": "รอข้อมูล",
+        "Details": "วัดบึงหมอกตั้งยู่ที่บึงหมอกหมู่ที่16ติดถนนสายราษีไศล-ยางชุมน้อยเป็นวัดที่กำลังพัฒนาบูรณะปฎิสังขรวิหารในอารามให้เจริญยิ่งขึ้นเป็นวัดที่น่าแวะเยี้ยมชมทำบุญสการบูชามีประพุธรูปหลวงพ่อทันใจองค์ใหญ่มีพระธาตุพระอาจารย์บัดดามีจตุรมุกของท่านเจ้าคุนอมรเมธาจารย์และย",
+        "latitude": "15.3077386",
+        "Longitude": "104.2172272",
+        "image": "image/upload/v1597231344/qtptb15uslj7j77cz0bb.jpg",
+        "Category": [
+            7,
+            5
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 45,
+    "fields": {
+        "id_temple": "45",
+        "name": "วัดบ้านโคกพยอม",
+        "Monk": "รอข้อมูล",
+        "Details": "มันสงบที่นี่ ดูเหมือนว่ามีสิ่งก่อสร้างมากมายเกิดขึ้นดังนั้นจึงมีเศษซากมากมาย วัดค่อนข้างทั่วไป แต่ก็ยังโอเค ฉันจะไม่วางแผนการเดินทางพิเศษเพื่อเยี่ยมชมที่นี่",
+        "latitude": "14.6621445",
+        "Longitude": "104.3596138",
+        "image": "image/upload/v1597231404/cyqb6hat45c9ltj3msla.jpg",
+        "Category": [
+            7,
+            6
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 46,
+    "fields": {
+        "id_temple": "46",
+        "name": "วัดบ้านกระแชงใหญ่",
+        "Monk": "รอข้อมูล",
+        "Details": "เป็นวัดประจำหมู่บ้าน เจ้าอาวาสเป็นเจ้าคณะตำบล เป็นสถานที่จัดงานประเพณีสำคัญต่างๆ โดยจะใช้วัดบ้านกระแชงใหญ่ เป็นศูนย์กลางในทุกๆกิจกรรมของตำบลกระแชงและของบ้านกระแชงใหญ่ ในทุกๆวันพุธจะมีตลาดนัดตอนเย็น มีสินค้าหลากหลายทั้งอาการกับข้าว พืชผักผลไม้ เลื้อผ้าและข",
+        "latitude": "14.658167",
+        "Longitude": "104.5839995",
+        "image": "image/upload/v1597231493/ygajhjmcgiyfduo1zopm.jpg",
+        "Category": [
+            7,
+            5,
+            4
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 47,
+    "fields": {
+        "id_temple": "47",
+        "name": "วัดบ้านบัวน้อย",
+        "Monk": "รอข้อมูล",
+        "Details": "\"ผู้คนน่ารัก อาหารอร่อย nice people ผู้ใหญ่บ้านใจดี ลูกบ้านยิ้มหวานอบอุ่น\"",
+        "latitude": "15.157435",
+        "Longitude": "104.4913643",
+        "image": "image/upload/v1597231666/rkx1yfpgbibtdwctquju.jpg",
+        "Category": [
+            7,
+            6
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 48,
+    "fields": {
+        "id_temple": "48",
+        "name": "วัดยางชุมใหญ่",
+        "Monk": "รอข้อมูล",
+        "Details": "หมู่ 1, ตําบลยางชุมใหญ่ อําเภอยางชุมน้อย จังหวัดศรีสะเกษ, 33190 33190",
+        "latitude": "15.2214658",
+        "Longitude": "104.4082649",
+        "image": "image/upload/v1597231806/kxgomwkcekrx9f4chhbe.jpg",
+        "Category": [
+            7,
+            6,
+            5,
+            4
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 49,
+    "fields": {
+        "id_temple": "49",
+        "name": "วัดโนนแดง",
+        "Monk": "รอข้อมูล",
+        "Details": "ตำบล หนองไผ่ อำเภอเมืองศรีสะเกษ ศรีสะเกษ 33000",
+        "latitude": "15.1246535",
+        "Longitude": "104.2892229",
+        "image": "image/upload/v1597231886/asdld0b9mrtnvpxquzeh.jpg",
+        "Category": [
+            7,
+            5
+        ]
+    }
+},
+{
+    "model": "Enroll.temple",
+    "pk": 50,
+    "fields": {
+        "id_temple": "50",
+        "name": "วัดสว่างอารมณ์",
+        "Monk": "รอข้อมูล",
+        "Details": "ตำบล คูซอด อำเภอเมืองศรีสะเกษ ศรีสะเกษ 33000",
+        "latitude": "15.191689",
+        "Longitude": "104.2772274",
+        "image": "image/upload/v1597232019/iscthgpg3l4qbyqzsa2d.jpg",
+        "Category": [
+            7,
+            6,
+            5
+        ]
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add category",
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "codename": "add_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change category",
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "codename": "change_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete category",
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "codename": "delete_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view category",
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "codename": "view_category"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add temple",
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "codename": "add_temple"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change temple",
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "codename": "change_temple"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete temple",
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "codename": "delete_temple"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can view temple",
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "codename": "view_temple"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$216000$PUIokQF28ZNk$h7fNiHRnJLTYIlTIvaih/OPmEIZ0b199bEkLeYAtmV8=",
+        "last_login": "2020-08-13T15:23:25.933Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2020-08-11T09:00:48.025Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2020-08-11T15:38:02.325Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "มาไหว้พระพุทธรูป",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2020-08-11T15:38:32.134Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "เสริมความเป็นสิริมงคล",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2020-08-11T15:39:10.004Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "ไหว้พระและเสี่ยงเซียมซี",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2020-08-11T15:42:47.623Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "ชื่อเสียงที่ศักดิ์สิทธิ์ของสถานที่",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2020-08-11T15:43:18.503Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "5",
+        "object_repr": "ความเลื่อมใสในพระพุทธศาสนา",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2020-08-11T15:43:49.828Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "6",
+        "object_repr": "อุโบสถ เจดีย์ วิหาร กำแพง",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2020-08-11T15:44:12.382Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "7",
+        "object_repr": "บริเวณวัดมีสภาพแวดล้อมที่ดี เช่น บริเวณวัดสะอาดต้นไม้สีเขียวมาก",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2020-08-11T15:44:55.300Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "8",
+        "object_repr": "มีพระเกจิที่มีชื่อเสียง",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2020-08-11T15:45:29.695Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "9",
+        "object_repr": "เยี่ยมชมสิ่งที่มีชื่อเสียงของจังหวัดศรี สะเกษ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2020-08-11T15:45:57.574Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "10",
+        "object_repr": "เพื่อศึกษาสถาปัตยกรรม จิตกรรม ประติมากรรม",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2020-08-11T15:46:30.105Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "1",
+        "object_repr": "วัดพระธาตุสุพรรณหงส์",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2020-08-11T15:51:24.783Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "2",
+        "object_repr": "วัดมหาพุทธาราม (วัดพระโต)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2020-08-11T16:51:03.900Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "3",
+        "object_repr": "วัดป่าศรีมงคลรัตนาราม",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2020-08-11T16:51:23.833Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "2",
+        "object_repr": "วัดมหาพุทธาราม (วัดพระโต)",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Monk\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2020-08-11T16:53:11.604Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "4",
+        "object_repr": "วัดเจียงอีศรีมงคลวราราม",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2020-08-11T16:55:20.594Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "5",
+        "object_repr": "วัดหนองตะเคียน",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2020-08-11T16:56:44.331Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "6",
+        "object_repr": "วัดบ้านง้อ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2020-08-11T16:58:05.954Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "7",
+        "object_repr": "วัดป่าศรีสำราญ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2020-08-11T17:00:36.861Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "8",
+        "object_repr": "วัดโนนแย้",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2020-08-11T17:01:56.086Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "9",
+        "object_repr": "วัดป่ามหาเจดีย์แก้ว (วัดล้านขวด)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2020-08-11T17:03:16.212Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "10",
+        "object_repr": "วัดพานทา",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2020-08-12T04:38:44.255Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "10",
+        "object_repr": "ศึกษาสถาปัตยกรรม จิตกรรม ประติมากรรม",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2020-08-12T04:38:56.754Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "9",
+        "object_repr": "มีชื่อเสียงของจังหวัดศรีสะเกษ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2020-08-12T05:24:56.644Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "10",
+        "object_repr": "วัดพานทา",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2020-08-12T05:25:03.523Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "9",
+        "object_repr": "วัดป่ามหาเจดีย์แก้ว (วัดล้านขวด)",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2020-08-12T05:29:18.441Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "1",
+        "object_repr": "วัดพระธาตุสุพรรณหงส์",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Category\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2020-08-12T10:28:59.156Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "11",
+        "object_repr": "วัดโนนแค",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2020-08-12T10:30:38.215Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "12",
+        "object_repr": "วัดทุ่งสว่าง",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2020-08-12T10:32:03.479Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "13",
+        "object_repr": "วัดเทพปราสาท สระกำแพงน้อย",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2020-08-12T10:33:19.379Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "14",
+        "object_repr": "วัดเพียนาม",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2020-08-12T10:34:45.610Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "15",
+        "object_repr": "วัดศรีมิ่งเมือง",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2020-08-12T10:36:04.515Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "16",
+        "object_repr": "วัดเฉลิมกาญจนา (วัดโนนกอง)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2020-08-12T10:38:49.265Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "17",
+        "object_repr": "วัดพระธาตุเรืองรอง",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2020-08-12T10:40:47.590Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "18",
+        "object_repr": "วัดบ้านกุดโง้ง",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2020-08-12T10:42:09.139Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "19",
+        "object_repr": "วัดหลวงสุมังคลาราม",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2020-08-12T10:43:22.430Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "20",
+        "object_repr": "วัดคูเมือง",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2020-08-12T10:44:58.583Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "21",
+        "object_repr": "วัดโพนข่า",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2020-08-12T10:45:13.424Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "20",
+        "object_repr": "วัดคูเมือง",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Id temple\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2020-08-12T10:46:49.132Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "22",
+        "object_repr": "วัดบ้านโพนเขวา",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2020-08-12T10:47:44.670Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "23",
+        "object_repr": "วัดโนนผึ้ง",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2020-08-12T10:48:37.286Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "24",
+        "object_repr": "วัดศรีบึงบูรพ์",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2020-08-12T10:49:34.674Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "25",
+        "object_repr": "วัดส้มป่อยใหญ่",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2020-08-12T10:50:47.103Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "26",
+        "object_repr": "วัดเขียนบูรพาราม",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2020-08-12T10:51:47.671Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "27",
+        "object_repr": "วัดยางกุด",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2020-08-12T10:52:55.250Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "28",
+        "object_repr": "วัดเบญจพุทธาราม",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2020-08-12T10:54:30.874Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "29",
+        "object_repr": "วัดก้านเหลือง",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2020-08-12T10:56:36.590Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "30",
+        "object_repr": "พระธาตุวัดไพรบึง",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2020-08-12T10:59:00.441Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "31",
+        "object_repr": "วัดโสภณวิหาร (บ้านกันทรารมย์)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2020-08-12T11:00:05.966Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "32",
+        "object_repr": "วัดสิเรียมพุทธาราม",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2020-08-12T11:01:29.045Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "33",
+        "object_repr": "วัดกระโพธิ์ช่างหม้อ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2020-08-12T11:03:35.671Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "34",
+        "object_repr": "วัดหนองหว้า",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2020-08-12T11:06:30.398Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "35",
+        "object_repr": "วัดบ้านเมืองจันทร์",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2020-08-12T11:10:27.914Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "36",
+        "object_repr": "วัดนาครินทร์",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2020-08-12T11:11:36.780Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "37",
+        "object_repr": "วัดศรีขุนหาญ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2020-08-12T11:12:52.108Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "38",
+        "object_repr": "วัดโพธิพฤกษ์ (วัดเจ๊ก)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2020-08-12T11:14:22.860Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "39",
+        "object_repr": "วัดนามวิจิตร์ตะเคียนราม",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2020-08-12T11:16:21.604Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "40",
+        "object_repr": "วัดบ้านจาน หลวงปู่หมุน ฐิตสีโล",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2020-08-12T11:18:21.189Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "41",
+        "object_repr": "วัดบ้านผักขะ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2020-08-12T11:19:50.444Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "42",
+        "object_repr": "วัดไพรพัฒนา",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2020-08-12T11:20:43.859Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "43",
+        "object_repr": "วัดโพธิ์ทองวนาราม",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2020-08-12T11:22:24.297Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "44",
+        "object_repr": "วัดบึงหมอก",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2020-08-12T11:23:25.077Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "45",
+        "object_repr": "วัดบ้านโคกพยอม",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2020-08-12T11:24:53.985Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "46",
+        "object_repr": "วัดบ้านกระแชงใหญ่",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2020-08-12T11:27:46.519Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "47",
+        "object_repr": "วัดบ้านบัวน้อย",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2020-08-12T11:30:06.897Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "48",
+        "object_repr": "วัดยางชุมใหญ่",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2020-08-12T11:31:26.687Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "49",
+        "object_repr": "วัดโนนแดง",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2020-08-12T11:33:39.829Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "temple"
+        ],
+        "object_id": "50",
+        "object_repr": "วัดสว่างอารมณ์",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2020-08-13T04:07:25.126Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "7",
+        "object_repr": "บริเวณวัดมีสภาพแวดล้อมที่ดี",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2020-08-13T04:08:33.853Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "3",
+        "object_repr": "ไหว้พระที่ศักดิ์สิทธิ์",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2020-08-13T04:09:25.128Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "1",
+        "object_repr": "มาไหว้พระพุทธรูป",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2020-08-13T15:14:01.115Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "10",
+        "object_repr": "สถาปัตยกรรม จิตกรรม ประติมากรรม",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2020-08-13T15:14:19.594Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "9",
+        "object_repr": "วัดมีชื่อเสียง",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2020-08-13T15:14:43.119Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "8",
+        "object_repr": "พระเกจิชื่อดัง",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2020-08-13T15:15:17.716Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "7",
+        "object_repr": "เช่าวัตถุมงคลเพื่อบูชา",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2020-08-13T15:15:45.210Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "6",
+        "object_repr": "ทำบุญปล่อยนก ปล่อยปลา",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2020-08-13T15:16:10.352Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "5",
+        "object_repr": "ศูนย์ปฏิบัติธรรม",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2020-08-13T15:17:07.595Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "11",
+        "object_repr": "เสี่ยงเซียมซี",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2020-08-13T15:23:46.108Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "10",
+        "object_repr": "สถาปัตยกรรม",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2020-08-13T15:24:14.500Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "4",
+        "object_repr": "สถานที่ศักดิ์สิทธิ์",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2020-08-13T15:25:06.569Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "Enroll",
+            "category"
+        ],
+        "object_id": "2",
+        "object_repr": "เสริมสิริมงคล",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Name\"]}}]"
+    }
+}
+]

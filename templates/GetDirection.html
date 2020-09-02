@@ -30,12 +30,7 @@
 <body onload="myfunction();">
 <div id="floating-panel">
 			<input type="button" value="แสดงเส้นทาง" name="btn" class="btn btn-success" id="getdirection" />
-<form method="post" action="{% url 'home' %}">
-    {% csrf_token %}  
-    <input type="hidden" name="latitude" id="latitude" value="">
-    <input type="hidden" name="longitude" id="longitude" value="">
-    <input type="submit" value="หน้าแรก" class="btn btn-outline-success ">
-</form>
+<a class="btn btn-primary" href="{% url 'home' %}" role="button">กลับ</a>
 	</div>
 </div>
 <div id="map">

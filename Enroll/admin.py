@@ -4,6 +4,7 @@ from Enroll import models
 class templeAdmin(admin.ModelAdmin):
     list_display = ('name','Monk','Details','latitude','Longitude',)
 
+    search_fields =('name',)
 
 
 admin.site.register(models.Category)

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+{% block title %}
+    {{title}}
+{% endblock %}
+
+{% block content %}
+<div class="card-columns">
+  {% for temple_obj in temple %}
+  <div class="card mb-4">
+    <img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{temple_obj.name}}</h5>
+      <p class="card-text">{{temple_obj.Monk}}</p>
+      <p class="card-text">{{temple_obj.Details}}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+  .card-columns {
+    @include media-breakpoint-only(lg) {
+      column-count: 4;
+    }
+
+    @include media-breakpoint-only(xl) {
+      column-count: 5;
+    }
+  }
+</style>
+{% endblock %}
+      
+   

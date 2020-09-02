@@ -234,7 +234,7 @@ def multiplepoint_route(request):
 def GetDirection(request, id):
     temple = models.temple.objects.get(id=id)
     locations = []
-    if request.session.get('lat',True):
+    if request.session['my_lat'] != None:
         temple.lat_me = request.session['my_lat']
         temple.log_me = request.session['my_long']
         print(temple.lat_me)

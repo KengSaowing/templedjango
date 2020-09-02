@@ -47,8 +47,8 @@ $(document).ready(function(){
     <thead>
       <tr>
         <th scope="col">อันดับ</th>
-        <th scope="col">ประเภทวัด</th>
         <th scope="col">ชื่อวัด</th>
+         <th scope="col">ประเภทวัด</th>
         <th scope="col">พระเกจิ</th>
         <th scope="col">รายละเอีด</th>
         <th scope="col">ละติจูด</th>
@@ -60,8 +60,9 @@ $(document).ready(function(){
       {% for temple_obj in temple %}
       <tr>
           <td>{{temple_obj.id_temple}}</td>
-          <td>{{temple_obj.Category}}</td>
           <td>{{temple_obj.name}}</td>
+          <td> {% for cat in temple_obj.Category.all %}
+          {{cat.name}}{% endfor %}</td> 
           <td>{{temple_obj.Monk}}</td>
           <td>{{temple_obj.Details}}</td>
           <td>{{temple_obj.Longitude}}</td>
@@ -69,7 +70,7 @@ $(document).ready(function(){
           <td><img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap"></td>
           
       </tr>
-     
+    
      {% endfor %}
     </tbody>
   </table>
