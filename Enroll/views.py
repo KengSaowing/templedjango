@@ -184,7 +184,7 @@ def multiplepoint_route(request):
     if request.method == "POST":
         templeList = request.POST.get("temple_id")
 
-        if request.session['my_lat'] != None:
+        if 'my_lat' in request.session and request.session['my_lat'] != None:
             lat_point = request.session['my_lat']
             long_point = request.session['my_long']
         else :
