@@ -90,7 +90,7 @@ def Results(request):
                 if str(temple.id) not in temple_list:
                     temple_list.append(str(temple.id))
                 
-        if request.session['my_lat'] != None:
+        if 'my_lat' in request.session and request.session['my_lat'] != None:
             latitude = request.session['my_lat']
             longitude = request.session['my_long']
         else :
