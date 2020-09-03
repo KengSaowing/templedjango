@@ -218,7 +218,8 @@ def multiplepoint_route(request):
     sequenced = shortestPath(locations)
     locations_new = []
     for i in sequenced:
-        locations_new.append(locations[i])
+        if i <= 26:
+            locations_new.append(locations[i])
 
 
     context ={
