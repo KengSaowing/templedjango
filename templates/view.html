@@ -19,11 +19,14 @@
     <br>
 <form method="post" action="{% url 'GetDirection' temple.id %}">
     {% csrf_token %}  
-    <input type="text" name="latitude" id="latitude" value="">
-    <input type="text" name="longitude" id="longitude" value="">
+    <input type="hidden" name="latitude" id="latitude" value="">
+    <input type="hidden" name="longitude" id="longitude" value="">
     <input type="hidden" name="temple_id" value="{{temples_id}}">
     <input type="submit" value="ขอเส้นทาง" class="btn btn-outline-success">
+    <a class="btn btn-outline-primary" href="{% url 'home' %}" role="button">กลับ</a>
 </form>
+<br>
+
   </div>
   </body>
 
