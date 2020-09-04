@@ -67,7 +67,7 @@
     {% csrf_token %}  
     <input type="hidden" name="latitude" id="latitude" value="">
     <input type="hidden" name="longitude" id="longitude" value="">
-    <input type="text" name="temple_id" value="{{temples_id}}">
+    <input type="hidden" name="temple_id" id="plan">
     <input type="submit" value="วางแผนการเดินทาง" class="btn btn-outline-success btn-lg btn-block">
 </form>
   
@@ -89,7 +89,34 @@
       }
   </script>
 <br>
+ <!-- JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <title>Document</title>
+    
+    <script>
+        $(document).ready(function(){
+            $('input[type=checkbox]').change(function(){
+                var val_text = "";
+                $('input[type=checkbox]').each(function(){
+                    var sThisVal = (this.checked ? $(this).val() : "");
+                    if(sThisVal != "") {
+                        if(val_text != ""){
+                            val_text = val_text + "," + sThisVal; 
+                        } else {
+                            val_text = sThisVal;
+                        }
+                    }
+                });
 
+                var x = document.getElementById("plan");
+                x.value = val_text;
+            });
+        });
+    </script>
+</head>
+     เลือกวัดทั้งหมด <input type="checkbox" id="{{temple_obj.id}}" value="{{temples_id}}">
 <div class="mb-4"></div>
   
 <div class="card-columns">
@@ -102,7 +129,14 @@
       {% for cat in temple_obj.Category.all %}
         <span class="card-text">{{cat.name}}</span>
       {% endfor %}
+      <br>
       <div>
+      <CENTER>
+        เลือกวัด <input type="checkbox" id="{{temple_obj.id}}" value="{{temple_obj.id}}">
+        </CENTER>
+      </div>
+      <div>
+      <br>
 <form method="post" action="{% url 'templeone' temple_obj.id %}">
     {% csrf_token %}  
     <input type="hidden" name="latitude" id="latitude" value="">

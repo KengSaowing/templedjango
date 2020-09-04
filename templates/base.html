@@ -32,7 +32,7 @@
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'wap' %}">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{% url 'home' %}">
         <div class="sidebar-brand-icon">
           <img src="{% static 'img/logo/sskru.png'%}">
         </div>
@@ -42,7 +42,7 @@
       </a>
       <hr class="sidebar-divider my-0">
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'home' %}">
+        <a class="nav-link" href="{% url 'wap' %}">
           <i class='fas fa-mosque'></i>
           <span>ข้อมูลวัด</span></a>
       </li>
@@ -51,12 +51,6 @@
         <a class="nav-link" href="{% url 'temple' %}">
           <i class='fas fa-place-of-worship'></i>
           <span>รีวิววัด</span></a>
-      </li>
-      <hr class="sidebar-divider">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">
-          <i class='fas fa-map'></i>
-          <span>แผนที่</span></a>
       </li>
       <hr class="sidebar-divider">
       <li class="nav-item">
