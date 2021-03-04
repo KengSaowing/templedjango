@@ -2,7 +2,7 @@ from django.contrib import admin
 from Enroll import models
 # Register your models here.
 class templeAdmin(admin.ModelAdmin):
-    list_display = ('name','Monk','Details','latitude','Longitude',)
+    list_display = ('name','Monk','Details','Detailsa','Detailsb','latitude','Longitude',)
 
     search_fields =('name',)
 

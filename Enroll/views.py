@@ -49,15 +49,13 @@ def temList(request):
 def wapview(request): 
     
     if request.GET.get('lat') != None:
-        print('lat')
         request.session['my_lat'] = request.GET.get('lat')
         request.session['my_long'] = request.GET.get('long')
 
         if request.session.get('lat',True):
             latitude = request.session['my_lat']
             longitude = request.session['my_long']
-            print(latitude)
-            print(longitude)
+           
 
     context = {}
     context ['title'] ="แหล่งรวมวัดจังหวัดศรีสะเกษ"
@@ -88,7 +86,8 @@ def Results(request):
         if len(query) > 0:
             for temple in query:
                 if str(temple.id) not in temple_list:
-                    temple_list.append(str(temple.id))
+                    temple_list.append(str(temple.id
+                    ))
                 
         if 'my_lat' in request.session and request.session['my_lat'] != None:
             latitude = request.session['my_lat']
@@ -142,7 +141,7 @@ def templeone(request, id):
     if request.session.get('lat',True):
         latitude = request.session['my_lat']
         longitude = request.session['my_long']
-        print(latitude)
+        print(latitude)                 
         print(longitude)
     else :
         latitude = request.POST.get("latitude")

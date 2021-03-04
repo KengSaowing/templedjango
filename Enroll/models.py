@@ -24,6 +24,8 @@ class temple(models.Model):
     name = models.CharField(max_length=255) 
     Monk = models.CharField(max_length=255)
     Details = models.CharField(max_length=255)
+    Detailsa = models.CharField(max_length=255)
+    Detailsb = models.CharField(max_length=255)
     latitude = models.CharField(max_length=255)
     Longitude = models.CharField(max_length=255)
     image = CloudinaryField('image')

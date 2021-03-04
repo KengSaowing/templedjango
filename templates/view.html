@@ -23,8 +23,11 @@
     <input type="hidden" name="longitude" id="longitude" value="">
     <input type="hidden" name="temple_id" value="{{temples_id}}">
     <input type="submit" value="ขอเส้นทาง" class="btn btn-outline-primary">
-    <a class="btn btn-outline-success" href="{% url 'Results' %}" role="button">กลับ</a>
 </form>
+    <input type="hidden" name="temple_id" value="{{temples_id}}">
+    <input type="submit" value="ย้อนกลับ" class="btn btn-outline-primary">
+    {% comment %} <a class="btn btn-outline-success" href="{% url 'Results' %}" role="button">กลับ</a> {% endcomment %}
+
 <br>
 
   </div>

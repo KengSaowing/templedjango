@@ -12,12 +12,12 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title>Google Maps Multiple Markers</title>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPr8A6Vo8Yjw2q1XCeD8wugso11614GKk&callback=initMap">
-  </script>
+  {% comment %} <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPr8A6Vo8Yjw2q1XCeD8wugso11614GKk&callback=initMap"> {% endcomment %}
+  {% comment %} </script> {% endcomment %}
 </head>
 
 <body onload="getLocation()">
-  <div id="map" style="width: 98%; height: 450px;"></div>
+  {% comment %} <div id="map" style="width: 98%; height: 450px;"></div> {% endcomment %}
   
   <script type="text/javascript">
   
@@ -63,12 +63,13 @@
 </div> {% endcomment %}
 <br>
 
-<form method="post" action="/multiplepoint_route">
+<form method="post" action="/multiplepoint_route" >
     {% csrf_token %}  
     <input type="hidden" name="latitude" id="latitude" value="">
     <input type="hidden" name="longitude" id="longitude" value="">
     <input type="hidden" name="temple_id" id="plan">
-    <input type="submit" value="วางแผนการเดินทาง" class="btn btn-outline-success btn-lg btn-block">
+    <input type="submit" name="continue_bt" id="continue_bt" value="วางแผนการเดินทาง" class="btn btn-outline-success btn-lg btn-block"
+   disabled  >
 </form>
   
     <script>
@@ -116,7 +117,10 @@
         });
     </script>
 </head>
-     เลือกวัดทั้งหมด <input type="checkbox" id="{{temple_obj.id}}" value="{{temples_id}}">
+ <form id="form1" name="form1" method="post" action="">
+เลือกวัดทั้งหมด <input type="checkbox"name="i_accept" id="i_accept" value="{{temples_id}}">
+     {% comment %} เลือกวัดทั้งหมด <input type="checkbox" id="{{temple_obj.id}}" name="i_accept" id="i_accept" value="{{temples_id}}"> {% endcomment %}
+</form>
 <div class="mb-4"></div>
   
 <div class="card-columns">
@@ -125,14 +129,20 @@
     <img class="card-img-top" src="{{temple_obj.image.url}}" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">{{temple_obj.name}}</h5>
-
+       <span class="card-text">{{temple_obj.Details}}</span>
+       <br>
+       <h5 class="card-text">ประเภทวัด</h5>
       {% for cat in temple_obj.Category.all %}
         <span class="card-text">{{cat.name}}</span>
       {% endfor %}
       <br>
       <div>
       <CENTER>
-        เลือกวัด <input type="checkbox" id="{{temple_obj.id}}" value="{{temple_obj.id}}">
+      <form id="form1" name="form1" method="post" action="">
+        <input type="checkbox" name="temone" id="temone" value="{{temple_obj.id}}"/>
+        เลือกวัด
+</form>
+        {% comment %} เลือกวัด <input type="checkbox" id="{{temple_obj.id}}" name="i_accept" id="i_accept" value="{{temple_obj.id}}"> {% endcomment %}
         </CENTER>
       </div>
       <div>
@@ -143,11 +153,29 @@
     <input type="hidden" name="longitude" id="longitude" value="">
     <input type="submit" value="เพิ่มเติม" class="btn btn-primary">
 </form>
+
       </div>
     </div>
   </div>
   {% endfor %}
 </div>
+    <script>
+      var lat = document.getElementById("latitude");
+      var long = document.getElementById("longitude");
+
+      function getLocation() {
+          if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showPosition);
+          } else { 
+              x.innerHTML = "Geolocation is not supported by this browser.";
+          }
+      }
+
+      function showPosition(position) {
+          lat.value = position.coords.latitude;
+          long.value = position.coords.longitude;
+      }
+  </script>
 
 <style>
   .card-columns {
@@ -160,4 +188,25 @@
     }
   }
 </style>
+<script type="text/javascript" src="//code.jquery.com/jquery-latest.min.js"></script>
+<script type="text/javascript">
+$(function(){
+     $("#i_accept").click(function(){ // เมื่อคลิกที่ checkbox id=i_accept
+         if($(this).prop("checked")==true){ // ถ้าเลือก
+             $("#continue_bt").removeAttr("disabled"); // ให้ปุ่ม id=continue_bt ทำงาน สามารถคลิกได้
+         }else{ // ยกเลิกไม่ทำการเลือก
+             $("#continue_bt").attr("disabled","disabled");  // ให้ปุ่ม id=continue_bt ไม่ทำงาน
+         }
+     });
+});
+$(function(){
+     $("#temone").click(function(){ // เมื่อคลิกที่ checkbox id=i_accept
+         if($(this).prop("checked")==true){ // ถ้าเลือก
+             $("#continue_bt").removeAttr("disabled"); // ให้ปุ่ม id=continue_bt ทำงาน สามารถคลิกได้
+         }else{ // ยกเลิกไม่ทำการเลือก
+             $("#continue_bt").attr("disabled","disabled");  // ให้ปุ่ม id=continue_bt ไม่ทำงาน
+         }
+     });
+});
+</script>
 {% endblock %}
