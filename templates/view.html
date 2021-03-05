@@ -17,6 +17,8 @@
     <p>พระเกจิ {{temple.Monk}}</p>
     <p>{{temple.Details}}</p>
     <br>
+  <div class="container">
+  <div class="row">
 <form method="post" action="{% url 'GetDirection' temple.id %}">
     {% csrf_token %}  
     <input type="hidden" name="latitude" id="latitude" value="">
@@ -26,7 +28,8 @@
 </form>
 <button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
     {% comment %} <a class="btn btn-outline-success" href="{% url 'Results' %}" role="button">กลับ</a> {% endcomment %}
-
+</div>
+</div>
 <br>
 
   </div>
