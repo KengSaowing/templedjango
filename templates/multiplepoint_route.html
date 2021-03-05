@@ -34,7 +34,8 @@
 </head>
 
 <body>
-<div id="floating-panel">
+<div id="floating-panel col-lg">
+<button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
 			 <a href="{% url 'home' %}"class="btn btn-primary" role="button">กลับหน้าแรก</a>
 	</div>
   <div id="map"></div>
@@ -97,5 +98,10 @@
     google.maps.event.addDomListener(window, "load", initialize);
   </script>
 </body>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
 
 </html>
