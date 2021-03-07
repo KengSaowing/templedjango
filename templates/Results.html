@@ -3,13 +3,14 @@
 {% block title %}
     {{title}}
 {% endblock %}
-
 {% block content %}
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt&family=Sarabun:wght@300&display=swap" rel="stylesheet">
 <html>
 
 <head>
+
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <title>Google Maps Multiple Markers</title>
   {% comment %} <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPr8A6Vo8Yjw2q1XCeD8wugso11614GKk&callback=initMap"> {% endcomment %}
@@ -68,7 +69,7 @@
     <input type="hidden" name="latitude" id="latitude" value="">
     <input type="hidden" name="longitude" id="longitude" value="">
     <input type="hidden" name="temple_id" id="plan">
-    <input type="submit" name="continue_bt" id="continue_bt" value="วางแผนการเดินทาง" class="btn btn-outline-success btn-lg btn-block"
+    <input type="submit" name="continue_bt" id="continue_bt" value="วางแผนการเดินทาง" title="เลือกติ๊กรายการก่อนทำวางแผน" class="btn btn-outline-success btn-lg btn-block"
    disabled  >
 </form>
   
@@ -219,5 +220,6 @@ function goBack() {
   window.history.back();
 }
 </script>
+
 
 {% endblock %}

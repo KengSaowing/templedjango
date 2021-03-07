@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-{% block content %}
 <html>
 <head>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -31,9 +30,6 @@
 <body onload="myfunction();">
 <div id="floating-panel">
 			<input type="button" value="แสดงเส้นทาง" name="btn" class="btn btn-success" id="getdirection" />
-			{% block temple %}
-			<button href="https://www.google.co.th/maps/place/{{temple.name}}/@{{temple_obj.Longitude}},{{temple_obj.latitude}}">นำทาง</button>
-			{% endblock %}
 			<button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
 <a class="btn btn-primary" href="{% url 'home' %}" role="button">กลับหน้าแรก</a>
 	</div>
@@ -83,4 +79,3 @@ function goBack() {
   window.history.back();
 }
 </script>
-{% endblock %}
