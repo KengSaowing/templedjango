@@ -14,7 +14,7 @@
     <img class="img-fluid" src="{{temple.image.url}}" alt="Responsive image" >
   </CENTER>
     <hr class="sidebar-divider">
-     {% for cat in temple_obj.Category.all %}
+     {% for cat in temple.Category.all %}
     <p>ประเภทวัด : {{cat.name}}</p>
     {% endfor %}
     <p>พระเกจิ : {{temple.Monk}}</p>
