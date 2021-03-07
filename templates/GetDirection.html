@@ -29,11 +29,9 @@
 </style>
 <body onload="myfunction();">
 <div id="floating-panel">
-<i class="material-icons" style="font-size:36px">
-			<input  name="btn" class="btn btn-success" id="getdirection" />
-			</i>
+			<input type="button" value="จับพิกัด" name="btn" class="btn btn-success" id="getdirection" />
 			<button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
-<a class="btn btn-primary" href="{% url 'home' %}" role="button">กลับหน้าแรก</a>
+<a class="btn btn-secondary" href="{% url 'home' %}" role="button">กลับหน้าแรก</a>
 	</div>
 </div>
 <div id="map">
