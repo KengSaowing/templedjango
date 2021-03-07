@@ -147,13 +147,18 @@
       </div>
       <div>
       <br>
+<div class="container">
+  <div class="row">
 <form method="post" action="{% url 'templeone' temple_obj.id %}">
     {% csrf_token %}  
     <input type="hidden" name="latitude" id="latitude" value="">
     <input type="hidden" name="longitude" id="longitude" value="">
     <input type="submit" value="เพิ่มเติม" class="btn btn-primary">
 </form>
-
+&ensp;
+<button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
+</div>
+</div>
       </div>
     </div>
   </div>
@@ -209,4 +214,10 @@ $(function(){
      });
 });
 </script>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
 {% endblock %}
