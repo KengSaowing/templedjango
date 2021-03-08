@@ -16,7 +16,9 @@
     <hr class="sidebar-divider">
    <center> <h5>ประเภทของวัด</h5></CENTER>
      {% for cat in temple.Category.all %}
+     <div class="row">
     <span class="col-lg-2">{{cat.name}}</span>
+    </div>
     {% endfor %}
     <br>
     <center>
