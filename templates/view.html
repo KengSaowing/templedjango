@@ -17,7 +17,7 @@
     <p>ประเภทของวัด</p>
     <div class="row">
      {% for cat in temple.Category.all %}
-    <div class="col-lg-4">{{cat.name}}</div>
+    <span class="col-lg-4">{{cat.name}}</span>
     {% endfor %}
     </div>
     <p>พระเกจิ : {{temple.Monk}}</p>
