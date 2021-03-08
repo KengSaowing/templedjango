@@ -15,10 +15,10 @@
   </CENTER>
     <hr class="sidebar-divider">
      <p>ประเภทของวัด</p>
-     {% for cat in temple.Category.all %}
      <div class="row">
     <div class="col">
-    <p  class = "">{{cat.name}}</p>
+     {% for cat in temple.Category.all %}
+    {{cat.name}}
     </div>
     </div>
     {% endfor %}
