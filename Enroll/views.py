@@ -84,11 +84,13 @@ def Results(request):
         query = models.temple.objects.filter(by_name & by_type)
         
         if len(query) > 0:
+            temple_q = []
             for temple in query:
                 if str(temple.id) not in temple_list:
-                    temple_list.append(str(temple.id
-                    ))
+                    temple_list.append(str(temple.id))
+                    temple_q.append(temple)
             print(temple_list)
+            
                 
         if 'my_lat' in request.session and request.session['my_lat'] != None:
             latitude = request.session['my_lat']
@@ -114,7 +116,7 @@ def Results(request):
             locations.append(dt)
 
     context = {
-        "temples": query,
+        "temples": temple_q,
         "temples_id": ",".join(temple_list),
         "locations": locations,
     }
