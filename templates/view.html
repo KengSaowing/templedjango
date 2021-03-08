@@ -14,13 +14,13 @@
     <img class="img-fluid" src="{{temple.image.url}}" alt="Responsive image" >
   </CENTER>
     <hr class="sidebar-divider">
-   <center> <h5>ประเภทของวัด</h5></CENTER>
+   <center> <h5>ประเภทของวัด</h5>
      {% for cat in temple.Category.all %}
      <div class="row">
     <span class="col-lg-2">{{cat.name}}</span>
     </div>
     {% endfor %}
-    <br>
+    <br></CENTER>
     <center>
     <h5>พระเกจิ </h5> <p>{{temple.Monk}}</p>
     <h5>รายละเอียด</h5></CENTER>
