@@ -15,10 +15,8 @@
   </CENTER>
     <hr class="sidebar-divider">
      <p>ประเภทของวัด</p>
-    <div class="col">
      {% for cat in temple.Category.all %}
-    {{cat.name}}
-    </div>
+    <div class="row">{{cat.name}}</div>
     {% endfor %}
     <p>พระเกจิ : {{temple.Monk}}</p>
     <P>รายละเอียด</p>
