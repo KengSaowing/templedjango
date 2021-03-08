@@ -11,11 +11,14 @@
     <input class="form-control" type="text" placeholder="ค้นหา" name='name' aria-label="Search">
   </div>
  <h5>เลือกประเภทวัด</h5>
+ 
   {% for Category_obj in Category %}
-  <div class="form-check form-check-inline">
+
+  <div class="form-check-inline col">
     <input class="form-check-input" type="checkbox" name="type" value="{{Category_obj.id}}">
     <label class="form-check-label" for="form-check-inline">{{Category_obj.name}}</label>
   </div>
+
   {% endfor %} 
   <div class="dropdown-divider"></div>
   <CENTER><input type="submit"  class="btn btn-primary btn-lg btn-block" value="ค้นหา"></CENTER>

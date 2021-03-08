@@ -115,6 +115,8 @@ def Results(request):
             ]
             locations.append(dt)
 
+    
+
     context = {
         "temples": temple_q,
         "temples_id": ",".join(temple_list),

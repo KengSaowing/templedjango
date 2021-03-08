@@ -131,8 +131,10 @@
     <div class="card-body">
       <h5 class="card-title">{{temple_obj.name}}</h5>
        <span class="card-text">{{temple_obj.Details}}</span>
-       <br>
-       <h6 class="card-text">ประเภทวัด</h6>
+       </br>
+       <center>
+       <h5 class="card-text">ประเภทวัด</h5>
+       </center>
       {% for cat in temple_obj.Category.all %}
         <span class="card-text">{{cat.name}}</span>
       {% endfor %}
