@@ -19,7 +19,19 @@
 
 <body onload="getLocation()">
   {% comment %} <div id="map" style="width: 98%; height: 450px;"></div> {% endcomment %}
-  
+  <style>
+
+#navbar {
+  overflow: hidden;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+</style>
   <script type="text/javascript">
   
     var locations = [
@@ -63,17 +75,18 @@
   <button onclick="getLocation()">จับพิกัด</button>
 </div> {% endcomment %}
 <br>
-<nav class="navbar navbar-light bg-light">
+<center>
+<div id="navbar">
 <form  method="post" action="/multiplepoint_route" >
     {% csrf_token %}  
     <input type="hidden" name="latitude" id="latitude" value="">
     <input type="hidden" name="longitude" id="longitude" value="">
     <input type="hidden" name="temple_id" id="plan">
-    <input type="submit" name="continue_bt" id="continue_bt" value="วางแผนการเดินทาง" title="เลือกติ๊กรายการก่อนทำวางแผน" class="btn btn-outline-success btn-lg btn-block"
+    <input type="submit" name="continue_bt" id="continue_bt" value="วางแผนการเดินทาง" title="เลือกติ๊กรายการก่อนทำวางแผน" class="btn btn-outline-success"
     >
     </form>
-    </nav>
-
+</div>
+</center>
 
   
     <script>
@@ -223,6 +236,20 @@ $(function(){
          }
      });
 });
+</script>
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
 </script>
 <script>
 function goBack() {
