@@ -37,7 +37,11 @@
 <div id="floating-panel">
 <button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
 			 <a href="{% url 'home' %}"class="btn btn-secondary" role="button">กลับหน้าแรก</a>
-       <a href="https://www.google.com/maps/dir/?api=1&origin=my_lat,my_long=Cherbourg,France&travelmode=driving&waypoints=Palace+of+Versailles%7CChartres+Cathedral%7CCathedral+of+Saint+Julian+of+Le+Mans%7CCaen+Castle"class="btn btn-secondary" role="button"></a>
+       {% for location in locations %}[
+       <a href="https://www.google.com/maps/dir/  
+      {{location|safe}}, 
+   "class="btn btn-secondary" role="button"></a>
+    {% endfor %}]; 
 	</div>
   <div id="map"></div>
   
