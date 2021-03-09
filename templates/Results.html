@@ -63,8 +63,8 @@
   <button onclick="getLocation()">จับพิกัด</button>
 </div> {% endcomment %}
 <br>
-<a class="scroll-to-top rounded" >
-<form method="post" action="/multiplepoint_route" >
+
+<form class="scroll-to-top rounded" method="post" action="/multiplepoint_route" >
     {% csrf_token %}  
     <input type="hidden" name="latitude" id="latitude" value="">
     <input type="hidden" name="longitude" id="longitude" value="">
@@ -72,7 +72,6 @@
     <input type="submit" name="continue_bt" id="continue_bt" value="วางแผนการเดินทาง" title="เลือกติ๊กรายการก่อนทำวางแผน" class="btn btn-outline-success btn-lg btn-block"
     >
 </form>
-</a>
   
     <script>
       var lat = document.getElementById("latitude");
