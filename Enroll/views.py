@@ -196,7 +196,7 @@ def multiplepoint_route(request):
             long_point = request.POST.get("longitude")
 
         dt = [
-            "start",
+            
             float(lat_point),
             float(long_point),
             0,
