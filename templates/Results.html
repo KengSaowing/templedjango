@@ -63,15 +63,18 @@
   <button onclick="getLocation()">จับพิกัด</button>
 </div> {% endcomment %}
 <br>
-
-<form class="scroll-to-top rounded" method="post" action="/multiplepoint_route" >
+<nav class="navbar navbar-light bg-light">
+<form  method="post" action="/multiplepoint_route" >
     {% csrf_token %}  
     <input type="hidden" name="latitude" id="latitude" value="">
     <input type="hidden" name="longitude" id="longitude" value="">
     <input type="hidden" name="temple_id" id="plan">
     <input type="submit" name="continue_bt" id="continue_bt" value="วางแผนการเดินทาง" title="เลือกติ๊กรายการก่อนทำวางแผน" class="btn btn-outline-success btn-lg btn-block"
     >
-</form>
+    </form>
+    </nav>
+
+
   
     <script>
       var lat = document.getElementById("latitude");
