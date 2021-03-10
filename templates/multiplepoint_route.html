@@ -1,4 +1,4 @@
-{% comment %} 
+
 <html>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -37,14 +37,7 @@
 <div id="floating-panel">
 <button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
 			 <a href="{% url 'home' %}"class="btn btn-secondary" role="button">กลับหน้าแรก</a>
-      <form method="post" action="/ds" >
-    {% csrf_token %}  
-    <input type="hidden" name="latitude" id="latitude" value="">
-    <input type="hidden" name="longitude" id="longitude" value="">
-
-    <input type="submit" name="continue_bt" id="continue_bt" value="วางแผนการเดินทาง" title="เลือกติ๊กรายการก่อนทำวางแผน" class="btn btn-success btn-lg btn-block"
-  >
-</form>
+       <a href="https://www.google.com/maps/dir/?api=1&origin="class="btn btn-secondary" role="button"></a>
 	</div>
   <div id="map"></div>
   
@@ -111,148 +104,5 @@ function goBack() {
   window.history.back();
 }
 </script>
-    <script>
-      var lat = document.getElementById("latitude");
-      var long = document.getElementById("longitude");
 
-      function getLocation() {
-          if (navigator.geolocation) {
-              navigator.geolocation.getCurrentPosition(showPosition);
-          } else { 
-              x.innerHTML = "Geolocation is not supported by this browser.";
-          }
-      }
-
-      function showPosition(position) {
-          lat.value = position.coords.latitude;
-          long.value = position.coords.longitude;
-      }
-  </script>
-</html> {% endcomment %}
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Draggable Directions</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <style type="text/css">
-      #right-panel {
-        font-family: "Roboto", "sans-serif";
-        line-height: 30px;
-        padding-left: 10px;
-      }
-
-      #right-panel select,
-      #right-panel input {
-        font-size: 15px;
-      }
-
-      #right-panel select {
-        width: 100%;
-      }
-
-      #right-panel i {
-        font-size: 12px;
-      }
-
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      #map {
-        height: 100%;
-        float: left;
-        width: 63%;
-        height: 100%;
-      }
-
-      #right-panel {
-        float: right;
-        width: 34%;
-        height: 100%;
-      }
-
-      .panel {
-        height: 100%;
-        overflow: auto;
-      }
-    </style>
-    <script>
-      function initMap() {
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 10,
-          center: { lat: 15.0640526, lng: 104.1121091},
-        });
-        const directionsService = new google.maps.DirectionsService();
-        const directionsRenderer = new google.maps.DirectionsRenderer({
-          draggable: true,
-          map,
-          panel: document.getElementById("right-panel"),
-        });
-        directionsRenderer.addListener("directions_changed", () => {
-          computeTotalDistance(directionsRenderer.getDirections());
-        });
-        displayRoute(
-         {% for templeList in temples %}
-          {templeList.name},
-          {%endfor%}
-          
-          directionsService,
-          directionsRenderer
-        );
-      }
-
-      function displayRoute(origin, destination, service, display) {
-        service.route(
-          {
-            origin: origin,
-            destination: destination,
-            waypoints: [
-    {% for location in locations %} 
-      {{location|safe}}, 
-    {% endfor %}
-            ],
-            travelMode: google.maps.TravelMode.DRIVING,
-            avoidTolls: true,
-          },
-          (result, status) => {
-            if (status === "OK" && result) {
-              display.setDirections(result);
-            } else {
-              alert("Could not display directions due to: " + status);
-            }
-          }
-        );
-      }
-
-      function computeTotalDistance(result) {
-        let total = 0;
-        const myroute = result.routes[0];
-
-        if (!myroute) {
-          return;
-        }
-
-        for (let i = 0; i < myroute.legs.length; i++) {
-          total += myroute.legs[i].distance.value;
-        }
-        total = total / 1000;
-        document.getElementById("total").innerHTML = total + " km";
-      }
-    </script>
-  </head>
-  <body>
-    <div id="map"></div>
-    <div id="right-panel">
-      <p>Total Distance: <span id="total"></span></p>
-    </div>
-
-    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPr8A6Vo8Yjw2q1XCeD8wugso11614GKk&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
-  </body>
 </html>

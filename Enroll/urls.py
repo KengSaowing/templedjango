@@ -14,7 +14,6 @@ urlpatterns = [
     path('GetDirection/<int:id>',views.GetDirection,name='GetDirection'),
     path('marker',views.marker,name='marker'),
     path('Results',views.Results,name='Results'),
-    path('ds',views.ds,name='ds'),
     
     
     
