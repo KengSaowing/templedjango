@@ -236,46 +236,6 @@ def multiplepoint_route(request):
 
     return render(request, 'multiplepoint_route.html', context)
 
-def GetDirection(request, id):
-    temple = models.temple.objects.get(id=id)
-    locations = []
-    if request.session['my_lat'] != None:
-        temple.lat_me = request.session['my_lat']
-        temple.log_me = request.session['my_long']
-        print(temple.lat_me)
-        print(temple.log_me)
-    else :
-        print(request.POST.get("latitude"))
-        print(request.POST.get("longitude"))
-        temple.lat_me = request.POST.get("latitude")
-        temple.log_me = request.POST.get("longitude")
-   
-
-
-
-    context ={
-        "title": " แผนที่แสดงวัด",
-        "temple":temple,
-        "locations":locations,
-        
-    }
-    
-    return render(request, 'GetDirection.html', context)
-
-def marker(request):
-     context ={
-        "title": " แผนที่แสดงวัด",
-    }
-     return render(request, 'marker.html', context)
-
-class templeViewSet(generics.ListAPIView):
-    queryset = models.temple.objects.all()
-    serializer_class = TempleSerializer
-
-class CategorySerializer(ModelViewSet):
-    queryset = models.Category.objects.all()
-    serializer_class = CategorySerializer
-
 def ds(request):
     locations = []
     if request.method == "POST":
@@ -327,7 +287,47 @@ def ds(request):
     for i in locations_new:
         print(i)
 
-    return render(request, 'ds.html', context
+    return render(request, 'ds.html', context)
+
+def GetDirection(request, id):
+    temple = models.temple.objects.get(id=id)
+    locations = []
+    if request.session['my_lat'] != None:
+        temple.lat_me = request.session['my_lat']
+        temple.log_me = request.session['my_long']
+        print(temple.lat_me)
+        print(temple.log_me)
+    else :
+        print(request.POST.get("latitude"))
+        print(request.POST.get("longitude"))
+        temple.lat_me = request.POST.get("latitude")
+        temple.log_me = request.POST.get("longitude")
+   
+
+
+
+    context ={
+        "title": " แผนที่แสดงวัด",
+        "temple":temple,
+        "locations":locations,
+        
+    }
+    
+    return render(request, 'GetDirection.html', context)
+
+def marker(request):
+     context ={
+        "title": " แผนที่แสดงวัด",
+    }
+     return render(request, 'marker.html', context)
+
+class templeViewSet(generics.ListAPIView):
+    queryset = models.temple.objects.all()
+    serializer_class = TempleSerializer
+
+class CategorySerializer(ModelViewSet):
+    queryset = models.Category.objects.all()
+    serializer_class = CategorySerializer
 
 def shortestPath(locations):
     nearest = 0
