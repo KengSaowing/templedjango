@@ -64,8 +64,11 @@
           computeTotalDistance(directionsRenderer.getDirections());
         });
         displayRoute(
-          "Perth, WA",
-          "Sydney, NSW",
+           [
+    {% for location in locations %} 
+      {{location|safe}}, 
+    {% endfor %}
+            ],
           directionsService,
           directionsRenderer
         );
@@ -77,9 +80,8 @@
             origin: origin,
             destination: destination,
             waypoints: [
-    {% for location in locations %} 
-      {{location|safe}}, 
-    {% endfor %}
+              { location: "Adelaide, SA" },
+              { location: "Broken Hill, NSW" },
             ],
             travelMode: google.maps.TravelMode.DRIVING,
             avoidTolls: true,
