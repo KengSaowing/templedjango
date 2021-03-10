@@ -195,8 +195,10 @@ function goBack() {
           computeTotalDistance(directionsRenderer.getDirections());
         });
         displayRoute(
-          "Perth, WA",
-          "Sydney, NSW",
+         {% for temple_obj in temples %}
+          {temple_obj.name}
+          {%endfor%%}
+          
           directionsService,
           directionsRenderer
         );
