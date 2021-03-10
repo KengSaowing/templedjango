@@ -37,7 +37,14 @@
 <div id="floating-panel">
 <button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
 			 <a href="{% url 'home' %}"class="btn btn-secondary" role="button">กลับหน้าแรก</a>
-       <a href="https://www.google.com/maps/dir/%E0%B8%9B%E0%B8%B2%E0%B8%A3%E0%B8%B5%E0%B8%AA/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A7%E0%B8%B1%E0%B8%87%E0%B9%81%E0%B8%A7%E0%B8%A3%E0%B9%8C%E0%B8%8B%E0%B8%B2%E0%B8%A2/%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B9%82%E0%B8%99%E0%B9%80%E0%B8%97%E0%B8%A3%E0%B8%AD%E0%B8%94%E0%B8%B2%E0%B8%A1%E0%B9%81%E0%B8%AB%E0%B9%88%E0%B8%87%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B9%8C%E0%B8%95%E0%B8%A3%E0%B9%8C/Cathedral+of+Saint+Julian+of+Le+Mans/Caen+Castle/%E0%B9%81%E0%B8%8A%E0%B8%A3%E0%B9%8C%E0%B8%9A%E0%B8%B9%E0%B8%A3%E0%B9%8C%E0%B8%81%E0%B9%82%E0%B8%AD%E0%B8%81%E0%B8%97%E0%B8%A7%E0%B8%B4%E0%B8%A5%E0%B8%A5%E0%B9%8C/@48.8171656,-0.7375389,8z/data=!3m1!4b1!4m40!4m39!1m5!1m1!1s0x47e66e1f06e2b70f:0x40b82c3688c9460!2m2!1d2.3522219!2d48.856614!1m5!1m1!1s0x47e67d94d7b14c75:0x538fcc15f59ce8f!2m2!1d2.1203554!2d48.8048649!1m5!1m1!1s0x47e40c44273a8095:0x1b20b5629f882821!2m2!1d1.4878371!2d48.4478026!1m5!1m1!1s0x47e288d047287989:0x58d724ec3efdd7ab!2m2!1d0.1988373!2d48.0092387!1m5!1m1!1s0x480a42bc1967abd3:0xc75230031163f3b1!2m2!1d-0.3626716!2d49.1864973!1m5!1m1!1s0x480c970b9d33188d:0x40c14484fb97e90!2m2!1d-1.622137!2d49.6337308!2m1!3b1!3e0"class="btn btn-secondary" role="button">นำทาง</a>
+      <form method="post" action="/ds" >
+    {% csrf_token %}  
+    <input type="hidden" name="latitude" id="latitude" value="">
+    <input type="hidden" name="longitude" id="longitude" value="">
+    <input type="hidden" name="temple_id" id="plan">
+    <input type="submit" name="continue_bt" id="continue_bt" value="วางแผนการเดินทาง" title="เลือกติ๊กรายการก่อนทำวางแผน" class="btn btn-success btn-lg btn-block"
+  >
+</form>
 	</div>
   <div id="map"></div>
   

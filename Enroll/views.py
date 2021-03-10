@@ -276,6 +276,59 @@ class CategorySerializer(ModelViewSet):
     queryset = models.Category.objects.all()
     serializer_class = CategorySerializer
 
+def ds(request):
+    locations = []
+    if request.method == "POST":
+        templeList = request.POST.get("temple_id")
+
+        if 'my_lat' in request.session and request.session['my_lat'] != None:
+            lat_point = request.session['my_lat']
+            long_point = request.session['my_long']
+        else :
+            lat_point = request.POST.get("latitude")
+            long_point = request.POST.get("longitude")
+
+        dt = [
+            "start",
+            float(lat_point),
+            float(long_point),
+            0,
+            0,
+        ]
+
+        locations.append(dt)
+
+        # Get id form templeList
+        lt = templeList.split(",")
+        for i, id in enumerate(lt):
+            temple = models.temple.objects.get(id=id)
+            dt = [
+                temple.name,
+                float(temple.latitude),
+                float(temple.Longitude),
+                int(i+1),
+                str(i+1)
+            ]
+            
+            locations.append(dt)
+    
+    sequenced = shortestPath(locations)
+    locations_new = []
+    for i in sequenced:
+        if i <= 26:
+            locations_new.append(locations[i])
+
+
+    context ={
+        "title": " แผนที่แสดงวัด",
+        "locations":locations_new,   
+    }
+    
+    for i in locations_new:
+        print(i)
+
+    return render(request, 'multiplepoint_route.html', context
+
 def shortestPath(locations):
     nearest = 0
     visited = []
