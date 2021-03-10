@@ -211,7 +211,7 @@ $(function(){
          if($(this).prop("checked")==true){ // ถ้าเลือก
              $("#continue_bt").removeAttr("disabled"); // ให้ปุ่ม id=continue_bt ทำงาน สามารถคลิกได้
          }else{ // ยกเลิกไม่ทำการเลือก
-             $("#continue_bt").attr("disabled","disabled");  // ให้ปุ่ม id=continue_bt ไม่ทำงาน
+             $("#continue_bt").attr("onclick");  // ให้ปุ่ม id=continue_bt ไม่ทำงาน
          }
      });
 });
