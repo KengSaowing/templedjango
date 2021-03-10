@@ -37,7 +37,7 @@
 <div id="floating-panel">
 <button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
 			 <a href="{% url 'home' %}"class="btn btn-secondary" role="button">กลับหน้าแรก</a>
-       <a onclick="mapsSelector()" class="btn btn-secondary" role="button">นำทาง</a>
+       <a href="https://www.google.com/maps/dir/?api=1&origin=latitude,latitude&"class="btn btn-secondary" role="button">นำทาง</a>
 	</div>
   <div id="map"></div>
   
@@ -121,18 +121,4 @@ function goBack() {
           long.value = position.coords.longitude;
       }
   </script>
-  
-<script>
-function mapsSelector() {
-  if /* if we're on iOS, open in Apple Maps */
-    ((navigator.platform.indexOf("iPhone") != -1) || 
-     (navigator.platform.indexOf("iPad") != -1) || 
-     (navigator.platform.indexOf("iPod") != -1))
-     {% for temple_obj in temples %}
-    window.open("maps://maps.google.com/maps?daddr=latitude,longitude&amp;ll=");
-else /* else use Google */
-    window.open("https://maps.google.com/maps?daddr=latitude,longitude&amp;ll=");
-}
-</script>
-
 </html>
