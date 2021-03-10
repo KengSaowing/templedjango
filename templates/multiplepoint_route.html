@@ -195,8 +195,8 @@ function goBack() {
           computeTotalDistance(directionsRenderer.getDirections());
         });
         displayRoute(
-         {% for temple_obj in temples %}
-          {temple_obj.name}
+         {% for templeList in temples %}
+          {templeList.name},
           {%endfor%}
           
           directionsService,

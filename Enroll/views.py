@@ -229,6 +229,7 @@ def multiplepoint_route(request):
     context ={
         "title": " แผนที่แสดงวัด",
         "locations":locations_new,   
+        "temple":templeList,
     }
     
     for i in locations_new:
