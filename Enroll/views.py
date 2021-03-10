@@ -327,7 +327,7 @@ def ds(request):
     for i in locations_new:
         print(i)
 
-    return render(request, 'multiplepoint_route.html', context
+    return render(request, 'ds.html', context
 
 def shortestPath(locations):
     nearest = 0
