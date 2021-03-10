@@ -37,7 +37,7 @@
 <div id="floating-panel">
 <button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
 			 <a href="{% url 'home' %}"class="btn btn-secondary" role="button">กลับหน้าแรก</a>
-       <a href="my_googleplus_username"class="btn btn-secondary" role="button">นำทาง</a>
+       <a onclick="mapsSelector()" class="btn btn-secondary" role="button">นำทาง</a>
 	</div>
   <div id="map"></div>
   
@@ -102,6 +102,17 @@
 <script>
 function goBack() {
   window.history.back();
+}
+</script>
+<script>
+function mapsSelector() {
+  if /* if we're on iOS, open in Apple Maps */
+    ((navigator.platform.indexOf("iPhone") != -1) || 
+     (navigator.platform.indexOf("iPad") != -1) || 
+     (navigator.platform.indexOf("iPod") != -1))
+    window.open("maps://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
+else /* else use Google */
+    window.open("https://maps.google.com/maps?daddr=<lat>,<long>&amp;ll=");
 }
 </script>
 
