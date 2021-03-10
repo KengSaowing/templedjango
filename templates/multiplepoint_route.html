@@ -37,7 +37,11 @@
 <div id="floating-panel">
 <button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
 			 <a href="{% url 'home' %}"class="btn btn-secondary" role="button">กลับหน้าแรก</a>
-       <a href="https://www.google.com/maps/dir/15.1181392,104.3616625/"class="btn btn-secondary" role="button"></a>
+       <a href="https://www.google.com/maps/dir/15.1181392,104.3616625/[{{%for temple in templeList%}}
+       {{temple.name|safe}},
+       {% endfor %}
+       ];
+       "class="btn btn-secondary" role="button"></a>
 	</div>
   <div id="map"></div>
   
