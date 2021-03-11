@@ -185,6 +185,7 @@ def multiplepoint(request):
 
 def multiplepoint_route(request):
     locations = []
+    temple = models.temple.objects.get(id=id)
     if request.method == "POST":
         templeList = request.POST.get("temple_id")
 
@@ -228,7 +229,8 @@ def multiplepoint_route(request):
 
     context ={
         "title": " แผนที่แสดงวัด",
-        "locations":locations_new,   
+        "locations":locations_new,
+        'temple': temple,   
     }
     
     for i in locations_new:

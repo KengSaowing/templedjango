@@ -37,8 +37,7 @@
 <div id="floating-panel">
 <button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
 			 <a href="{% url 'home' %}"class="btn btn-secondary" role="button">กลับหน้าแรก</a>
-       <a href="com.google.android.apps.maps
-       "class="btn btn-secondary" role="button"></a>
+       <a class="btn btn-secondary" onclick="myFunction()" role="button">นำทาง</a>
 	</div>
   <div id="map"></div>
   
@@ -103,6 +102,11 @@
 <script>
 function goBack() {
   window.history.back();
+}
+</script>
+<script>
+function myFunction() {
+  window.open("https://www.google.com/maps/dir/?api=1&origin={{temple.name}}&destination=Pike+Place+Market+Seattle+WA&travelmode=bicycling");
 }
 </script>
 
