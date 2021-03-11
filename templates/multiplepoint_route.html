@@ -50,6 +50,8 @@
     {% for location in locations %} 
       {{location|safe}}, 
     {% endfor %}];
+    map: maps,
+    title: {{templeList.name}}
 
     function initialize() {
       directionsDisplay = new google.maps.DirectionsRenderer();
