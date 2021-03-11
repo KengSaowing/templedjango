@@ -32,7 +32,7 @@
 			<input type="button" value="จับพิกัด" name="btn" class="btn btn-success" id="getdirection" />
 			<button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
 <a class="btn btn-secondary" href="{% url 'home' %}" role="button">กลับหน้าแรก</a>
-<button class="btn btn-outline-primary" onclick="myFunction()">Try it</button>
+<a href = "http://www.google.com/maps/dir/?api=1&origin={{temple.lat_me}},{{temple.log_me}}&destination={{temple.name}}&travelmode=bicycling">
 	</div>
 </div>
 <div id="map">
@@ -75,11 +75,6 @@
 </script>
 <!-- google map api -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPr8A6Vo8Yjw2q1XCeD8wugso11614GKk&libraries=places"></script>
-<script>
-function myFunction() {
-  window.open("http://www.google.com/maps/dir/?api=1&origin={{temple.latitude}},{{temple.Longitude}}&destination={{temple.name}}&travelmode=bicycling");
-  }
-</script>
 <script>
 function goBack() {
   window.history.back();
