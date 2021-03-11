@@ -32,7 +32,7 @@
 			<input type="button" value="จับพิกัด" name="btn" class="btn btn-success" id="getdirection" />
 			<button class="btn btn-outline-primary" onclick="goBack()">ย้อนกลับ</button>
 <a class="btn btn-secondary" href="{% url 'home' %}" role="button">กลับหน้าแรก</a>
-<form>
+<form>0
   <input type="button" value="Open Window" onclick="openWin()">
 </form>
 {% comment %} <a href = "https://www.google.com/maps/dir/{{temple.lat_me}},{{temple.log_me}}&destination={{temple.name}}&travelmode=bicycling"> {% endcomment %}
@@ -85,6 +85,6 @@ function goBack() {
 </script>
 <script>
 function openWin() {
-  window.open("https://www.google.com/maps/dir/{{temple.lat_me}},{{temple.log_me}}&destination={{temple.name}}&travelmode=bicycling","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes,");
+  window.open("https://www.google.com/maps/dir/&destination={{temple.name}}&travelmode=bicycling","_blank","toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes,");
 }
 </script>

@@ -185,7 +185,6 @@ def multiplepoint(request):
 
 def multiplepoint_route(request):
     locations = []
-    temple = models.temple.objects.get(id=id)
     if request.method == "POST":
         templeList = request.POST.get("temple_id")
 
